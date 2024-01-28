@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "360072007112",
+    "project_id": "pulsefusion-1d5ed",
+    "storage_bucket": "pulsefusion-1d5ed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:360072007112:android:f7aa31c2bea6f3ea4884fd",
+        "android_client_info": {
+          "package_name": "com.ibrahimerencskn.PulseFusion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "360072007112-6ud9shjfb07b47rfdmuq62hpb80r1dv6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ibrahimerencskn.PulseFusion",
+            "certificate_hash": "25e964fe3509a66827fe3a05ffa74d725babf232"
+          }
+        },
+        {
+          "client_id": "360072007112-ifcmkk2auk87r5n06ipr5c8ogrsj2pm7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ibrahimerencskn.PulseFusion",
+            "certificate_hash": "00713a625ed9b3665b688f1c78bffbafe7c233e5"
+          }
+        },
+        {
+          "client_id": "360072007112-75plrar7svmvakafk4naun2niojhlaq9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgnUTFw3SIMgd2vaV2yiOPywiSL5EFhTA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "360072007112-75plrar7svmvakafk4naun2niojhlaq9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
