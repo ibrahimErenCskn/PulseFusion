@@ -6,7 +6,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 export default function SplashScreen() {
     return (
         <SafeAreaView>
-            <Button title='Login page' onPress={() => router.replace('/(auth)/loginscreen/')} />
+            <Button title='Login page' onPress={() => router.navigate('/(auth)/loginscreen/')} />
         </SafeAreaView>
     )
 }

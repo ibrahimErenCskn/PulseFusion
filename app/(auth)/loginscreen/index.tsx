@@ -1,46 +1,88 @@
-import { Button, View } from 'react-native'
-import React from 'react'
-import { GoogleSignin, statusCodes } from '@react-native-google-signin/google-signin'
-import auth from '@react-native-firebase/auth';
+import { Keyboard, Pressable, SafeAreaView, Text, TouchableWithoutFeedback, View, Dimensions } from 'react-native'
+import React, { useEffect, useState } from 'react'
+import { Formik } from 'formik';
+import CustomTextInput from '@/components/CustomTextInput';
+import CustomButton from '@/components/CustomButton';
+import SocialEntegration from '@/components/SocialEntegration';
+import { router } from 'expo-router';
+import { useDispatch } from 'react-redux';
+import { googleLoginAndRegister, loginHandle } from '@/redux/reducers/authSlice';
+import LottieAnim from '@/components/LottieAnim';
 
-GoogleSignin.configure({
-    webClientId: '360072007112-75plrar7svmvakafk4naun2niojhlaq9.apps.googleusercontent.com',
-});
+const { width, height } = Dimensions.get('window')
 export default function LoginScreen() {
-    async function onGoogleButtonPress() {
-        await GoogleSignin?.hasPlayServices({ showPlayServicesUpdateDialog: true });
-        const { idToken } = await GoogleSignin.signIn();
-        const googleCredential = auth.GoogleAuthProvider.credential(idToken);
-        return auth().signInWithCredential(googleCredential);
-    }
-    const signInMailAndPass = () => {
-        auth()
-            .createUserWithEmailAndPassword('jane.doe@example.com', 'SuperSecretPassword!')
-            .then(() => {
-                console.log('User account created & signed in!');
-            })
-            .catch(error => {
-                if (error.code === 'auth/email-already-in-use') {
-                    console.log('That email address is already in use!');
-                }
+    const dispatch = useDispatch()
+    const [keyboardDidShow, setKeyboardDidShow] = useState(false)
 
-                if (error.code === 'auth/invalid-email') {
-                    console.log('That email address is invalid!');
-                }
+    useEffect(() => {
+        const keyboardDidShowListener = Keyboard.addListener(
+            'keyboardDidShow',
+            () => {
+                setKeyboardDidShow(true)
+            }
+        );
+        const keyboardDidHideListener = Keyboard.addListener(
+            'keyboardDidHide',
+            () => {
+                setKeyboardDidShow(false)
+            }
+        );
 
-                console.error(error);
-            });
-    }
+        // Temizlik için event dinleyicisini kaldırın
+        return () => {
+            keyboardDidShowListener.remove();
+            keyboardDidHideListener.remove();
+        };
+    }, []);
     return (
-        <View>
-            <Button
-                title="Google Sign-In"
-                onPress={() => onGoogleButtonPress().then(() => console.log('Signed in with Google!')).catch(() => console.log('Hata'))}
-            />
-            <Button
-                title="email sign in"
-                onPress={() => signInMailAndPass()}
-            />
-        </View>
+        <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()} touchSoundDisabled>
+            <SafeAreaView style={{ flex: 1, backgroundColor: '#B5C9FF', paddingVertical: 10 }}>
+                {
+                    !keyboardDidShow && (
+                        <View style={{ height: height * 0.25, alignItems: 'center' }}>
+                            <LottieAnim speed={0.8} anim={require('../../../lottie/LoginAnim.json')} width={height * 0.3} height={height * 0.3} />
+                        </View>
+                    )
+                }
+                <View style={{ height: height * 0.45 }}>
+                    <Formik
+                        initialValues={{ email: '', password: '' }}
+                        onSubmit={values => {
+                            dispatch(loginHandle(values))
+                        }}
+                    >
+                        {({ handleChange, handleBlur, handleSubmit, values }) => (
+                            <View style={{ flex: 1, justifyContent: 'space-between', paddingVertical: 40 }}>
+                                <View style={{ width: '100%', alignItems: 'center', gap: 50 }}>
+                                    <CustomTextInput placeH='Email' val={values.email} onChangeT={handleChange('email')} onB={handleBlur('email')} />
+                                    <CustomTextInput placeH='Password' val={values.password} onChangeT={handleChange('password')} onB={handleBlur('password')} />
+                                </View>
+                                <View style={{ width: '100%', alignItems: 'center' }}>
+                                    <CustomButton title='Login' onP={handleSubmit} />
+                                </View>
+                            </View>
+                        )}
+                    </Formik>
+                </View>
+                <View style={{ flex: 1, justifyContent: 'space-around' }}>
+                    {
+                        !keyboardDidShow &&
+                        <View style={{ flexDirection: 'row', gap: 50, justifyContent: 'center' }}>
+                            <SocialEntegration path={require('../../../assets/images/googleA.png')} custoImgStyle={{ width: 48, height: 48 }} setPress={() => dispatch(googleLoginAndRegister())} />
+                            <SocialEntegration path={require('../../../assets/images/facebookA.png')} custoImgStyle={{ width: 48, height: 48 }} />
+                        </View>
+                    }
+                    {
+                        !keyboardDidShow &&
+                        <View style={{ flexDirection: 'row', gap: 5, justifyContent: 'center' }}>
+                            <Text>Already have an account?</Text>
+                            <Pressable onPress={() => router.navigate('(auth)/registerscreen')}>
+                                <Text>Register</Text>
+                            </Pressable>
+                        </View>
+                    }
+                </View>
+            </SafeAreaView>
+        </TouchableWithoutFeedback>
     )
 }
