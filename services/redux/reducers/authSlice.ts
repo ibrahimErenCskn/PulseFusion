@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-import type { PayloadAction } from '@reduxjs/toolkit'
 import auth from '@react-native-firebase/auth';
 import { GoogleSignin } from '@react-native-google-signin/google-signin'
 
@@ -16,6 +15,7 @@ interface UserProps {
 export const loginHandle: any = createAsyncThunk('user/login', async ({ email, password }: UserProps) => {
     try {
         await auth().signInWithEmailAndPassword(email, password)
+        return auth()?.currentUser
     } catch (err) {
         console.log(err)
         throw err
@@ -27,6 +27,7 @@ export const googleLoginAndRegister: any = createAsyncThunk('user/googlelogin', 
         const { idToken } = await GoogleSignin.signIn();
         const googleCredential = auth.GoogleAuthProvider.credential(idToken);
         await auth().signInWithCredential(googleCredential);
+        return auth()?.currentUser
     } catch (err) {
         console.log(err)
         throw err
@@ -39,6 +40,7 @@ export const registerHandle: any = createAsyncThunk('user/register', async ({ em
         await auth().currentUser?.updateProfile({
             displayName: username
         })
+        return auth()?.currentUser
     } catch (err) {
         console.log(err)
         throw err
@@ -49,6 +51,7 @@ export const logaut: any = createAsyncThunk('user/logaut', async () => {
     try {
         await GoogleSignin?.signOut();
         await auth().signOut()
+        return auth()?.currentUser
     } catch (error) {
         console.error(error);
     }
@@ -68,6 +71,9 @@ export const authSlice = createSlice({
     name: 'auth',
     initialState,
     reducers: {
+        setData: (state, action) => {
+            state.data = action.payload
+        }
     },
     extraReducers(builder) {
         builder
@@ -76,6 +82,7 @@ export const authSlice = createSlice({
             })
             .addCase(loginHandle.fulfilled, (state, action) => {
                 state.isLoading = false
+                state.data = action.payload
                 console.log("Giriş Yapıldı Email ve Şifre ile")
             })
             .addCase(loginHandle.rejected, (state) => {
@@ -86,6 +93,7 @@ export const authSlice = createSlice({
             })
             .addCase(googleLoginAndRegister.fulfilled, (state, action) => {
                 state.isLoading = false
+                state.data = action.payload
                 console.log("Giriş Yapıldı Google ile")
             })
             .addCase(googleLoginAndRegister.rejected, (state) => {
@@ -96,6 +104,7 @@ export const authSlice = createSlice({
             })
             .addCase(registerHandle.fulfilled, (state, action) => {
                 state.isLoading = false
+                state.data = action.payload
                 console.log("Kayıt olundu email ve şifre ile")
             })
             .addCase(registerHandle.rejected, (state) => {
@@ -106,6 +115,7 @@ export const authSlice = createSlice({
             })
             .addCase(logaut.fulfilled, (state, action) => {
                 state.isLoading = false
+                state.data = action.payload
                 console.log("Çıkış Yapıldı")
             })
             .addCase(logaut.rejected, (state) => {
@@ -115,6 +125,6 @@ export const authSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { } = authSlice.actions
+export const { setData } = authSlice.actions
 
 export default authSlice.reducer

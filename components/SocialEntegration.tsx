@@ -1,12 +1,12 @@
-import { Image, Dimensions, StyleSheet, Pressable } from 'react-native'
+import { Image, Dimensions, StyleSheet, Pressable, ViewStyle } from 'react-native'
 import React from 'react'
 
 const { width, height } = Dimensions.get('window')
 
 interface SocialEntegratioProps {
-    customStyles?: object
+    customStyles?: ViewStyle
     path: any,
-    setPress?: any
+    setPress?(): void
     custoImgStyle?: object
 }
 

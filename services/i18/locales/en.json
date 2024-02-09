@@ -1,0 +1,24 @@
+{
+    "change-language": "Change Language",
+    "get-started": "Get Started",
+    "splash-text": "Test",
+    "loginScreen": {
+        "email": "Email",
+        "password": "Password",
+        "login": "Login",
+        "footer-text": "Already have an account?"
+    },
+    "registerScreen": {
+        "username": "Username",
+        "email": "Email",
+        "password": "Password",
+        "register": "Register",
+        "footer-text": "Already have an account?"
+    },
+    "homeScreen": {
+        "welcome-back": "Welcome Back"
+    },
+    "notificationScreen": {
+        "notification": "Notifications"
+    }
+}

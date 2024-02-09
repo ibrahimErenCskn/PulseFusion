@@ -1,0 +1,24 @@
+{
+    "change-language": "Dil Değiştir",
+    "get-started": "Başla",
+    "splash-text": "Deneme",
+    "loginScreen": {
+        "email": "E-Posta",
+        "password": "Şifre",
+        "login": "Giriş Yap",
+        "footer-text": "Zaten Hesabınız Varmı?"
+    },
+    "registerScreen": {
+        "username": "Kullanıcı Adı",
+        "email": "E-Posta",
+        "password": "Şifre",
+        "register": "Kayıt ol",
+        "footer-text": "Zaten Hesabınız Varmı?"
+    },
+    "homeScreen": {
+        "welcome-back": "Hoşgeldin"
+    },
+    "notificationScreen": {
+        "notification": "Bildirimler"
+    }
+}

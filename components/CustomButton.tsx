@@ -1,14 +1,20 @@
-import { Text, Pressable } from 'react-native'
+import { Text, Pressable, ViewStyle, Dimensions, TextStyle } from 'react-native'
 
 interface CustomButtonProps {
-    onP: any
+    onP(): void
     title: string
+    customStyle?: ViewStyle
+    customTextStyle?: TextStyle
 }
 
-export default function CustomButton({ onP, title }: CustomButtonProps) {
+const { width } = Dimensions.get('window')
+
+export default function CustomButton({ onP, title, customStyle, customTextStyle }: CustomButtonProps) {
     return (
-        <Pressable style={{ width: '40%', height: 50, backgroundColor: 'white', borderRadius: 25, alignItems: 'center', justifyContent: 'center' }} onPress={onP}>
-            <Text style={{ fontSize: 25, fontWeight: 'bold' }}>{title}</Text>
+        <Pressable style={[{
+            width: width * 0.4, height: 50, backgroundColor: 'white', borderRadius: 25, alignItems: 'center', justifyContent: 'center'
+        }, customStyle]} onPress={onP}>
+            <Text style={[{ fontSize: 25, fontWeight: 'bold' }, customTextStyle]}>{title}</Text>
         </Pressable>
     )
 }

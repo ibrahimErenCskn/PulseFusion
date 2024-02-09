@@ -6,11 +6,14 @@ import CustomButton from '@/components/CustomButton';
 import SocialEntegration from '@/components/SocialEntegration';
 import { router } from 'expo-router';
 import { useDispatch } from 'react-redux';
-import { googleLoginAndRegister, loginHandle } from '@/redux/reducers/authSlice';
-import LottieAnim from '@/components/LottieAnim';
+import { loginHandle, googleLoginAndRegister } from '@/services/redux/reducers/authSlice'
+import LottieAnim from '@/services/lottie/LottieAnim';
+import { useTranslation } from 'react-i18next'
 
-const { width, height } = Dimensions.get('window')
+const { height } = Dimensions.get('window')
+
 export default function LoginScreen() {
+    const { t } = useTranslation()
     const dispatch = useDispatch()
     const [keyboardDidShow, setKeyboardDidShow] = useState(false)
 
@@ -40,7 +43,7 @@ export default function LoginScreen() {
                 {
                     !keyboardDidShow && (
                         <View style={{ height: height * 0.25, alignItems: 'center' }}>
-                            <LottieAnim speed={0.8} anim={require('../../../lottie/LoginAnim.json')} width={height * 0.3} height={height * 0.3} />
+                            <LottieAnim speed={0.8} anim={require('@/services/lottie/Anim/LoginAnim.json')} width={height * 0.3} height={height * 0.3} />
                         </View>
                     )
                 }
@@ -54,11 +57,11 @@ export default function LoginScreen() {
                         {({ handleChange, handleBlur, handleSubmit, values }) => (
                             <View style={{ flex: 1, justifyContent: 'space-between', paddingVertical: 40 }}>
                                 <View style={{ width: '100%', alignItems: 'center', gap: 50 }}>
-                                    <CustomTextInput placeH='Email' val={values.email} onChangeT={handleChange('email')} onB={handleBlur('email')} />
-                                    <CustomTextInput placeH='Password' val={values.password} onChangeT={handleChange('password')} onB={handleBlur('password')} />
+                                    <CustomTextInput placeH={t('loginScreen.email')} val={values.email} onChangeT={handleChange('email')} onB={handleBlur('email')} />
+                                    <CustomTextInput placeH={t('loginScreen.password')} val={values.password} onChangeT={handleChange('password')} onB={handleBlur('password')} />
                                 </View>
                                 <View style={{ width: '100%', alignItems: 'center' }}>
-                                    <CustomButton title='Login' onP={handleSubmit} />
+                                    <CustomButton title={t('loginScreen.login')} onP={handleSubmit} />
                                 </View>
                             </View>
                         )}
@@ -75,9 +78,9 @@ export default function LoginScreen() {
                     {
                         !keyboardDidShow &&
                         <View style={{ flexDirection: 'row', gap: 5, justifyContent: 'center' }}>
-                            <Text>Already have an account?</Text>
+                            <Text style={{ fontWeight: 'bold', fontSize: 18 }}>{t('loginScreen.footer-text')}</Text>
                             <Pressable onPress={() => router.navigate('(auth)/registerscreen')}>
-                                <Text>Register</Text>
+                                <Text style={{ fontWeight: 'bold', color: 'white', fontSize: 18 }}>{t('registerScreen.register')}</Text>
                             </Pressable>
                         </View>
                     }

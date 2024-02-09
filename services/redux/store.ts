@@ -1,10 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
 import authSlice from './reducers/authSlice'
+import themeChange from './reducers/themeChange'
 
 export const store = configureStore({
   reducer: {
-    auth: authSlice
+    auth: authSlice,
+    theme: themeChange
   },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware({ serializableCheck: false })
 })
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

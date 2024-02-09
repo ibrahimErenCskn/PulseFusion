@@ -21,7 +21,7 @@ export default function LottieAnim({ anim, width, height, speed }: LoadinProps) 
                 width: width ? width : '100%',
                 height: height ? height : '100%',
             }}
-            source={anim ? anim : require('../lottie/LoginTwoAnim.json')}
+            source={anim ? anim : require('./Anim/LoginTwoAnim.json')}
         />
     )
 }
