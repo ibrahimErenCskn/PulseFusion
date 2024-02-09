@@ -29,12 +29,14 @@ export default function HomeScreen() {
             </View>
             <ScrollView showsVerticalScrollIndicator={false} overScrollMode='never'>
                 <WidgetContainer setHeight={150} customStyle={{ padding: 10 }}>
-                    <View style={{ height: '100%', justifyContent: 'space-between', paddingVertical: 12 }}>
-                        <Text style={{ fontSize: 18, color: 'white' }}>
-                            BMI-Body Mass Index
-                        </Text>
-                        <CustomButton title='View More' onP={() => { }} customStyle={{ width: 120, height: 45 }} customTextStyle={{ fontSize: 18 }} />
-                    </View>
+                    <>
+                        <View style={{ height: '100%', justifyContent: 'space-between', paddingVertical: 12 }}>
+                            <Text style={{ fontSize: 18, color: 'white' }}>
+                                BMI-Body Mass Index
+                            </Text>
+                            <CustomButton title='View More' onP={() => { }} customStyle={{ width: 120, height: 45 }} customTextStyle={{ fontSize: 18 }} />
+                        </View>
+                    </>
                 </WidgetContainer>
                 <WidgetContainer setHeight={400}>
                     <Text>Naber</Text>
