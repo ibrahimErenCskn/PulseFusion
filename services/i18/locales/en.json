@@ -15,8 +15,25 @@
         "register": "Register",
         "footer-text": "Already have an account?"
     },
+    "setProfileScreen": {
+        "complete-profile-text": "Let’s complete your profile",
+        "set-profile": "Set Profile",
+        "choose-gender": "Choose Gender",
+        "weight": "Weight",
+        "height": "Height"
+    },
     "homeScreen": {
-        "welcome-back": "Welcome Back"
+        "welcome-back": "Welcome Back",
+        "bmiWidget": {
+            "bmi": "Body Mass Index",
+            "button-text": "View More",
+            "bmiIndexName": {
+                "underweight": "Underweight",
+                "normal": "Normal",
+                "overweight": "Overweight",
+                "obese": "Obese"
+            }
+        }
     },
     "notificationScreen": {
         "notification": "Notifications"

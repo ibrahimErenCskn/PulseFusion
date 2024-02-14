@@ -15,8 +15,19 @@
         "register": "Kayıt ol",
         "footer-text": "Zaten Hesabınız Varmı?"
     },
+    "setProfileScreen": {},
     "homeScreen": {
-        "welcome-back": "Hoşgeldin"
+        "welcome-back": "Hoşgeldin",
+        "bmiWidget": {
+            "bmi": "Vucut Kitle Index",
+            "button-text": "Daha Fazla",
+            "bmiIndexName": {
+                "underweight": "Düşük Kilo",
+                "normal": "Normal",
+                "overweight": "Kilolu",
+                "obese": "Obezite"
+            }
+        }
     },
     "notificationScreen": {
         "notification": "Bildirimler"

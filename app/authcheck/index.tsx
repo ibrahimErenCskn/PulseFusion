@@ -5,6 +5,7 @@ import auth from '@react-native-firebase/auth'
 import LottieAnim from '@/services/lottie/LottieAnim'
 import { useDispatch } from 'react-redux'
 import { setData } from '@/services/redux/reducers/authSlice'
+import { checkUserData } from '@/services/redux/reducers/firestore'
 
 export default function AuthCheck() {
     const dispatch = useDispatch()
@@ -12,7 +13,12 @@ export default function AuthCheck() {
         auth().onAuthStateChanged(async (user) => {
             if (user) {
                 dispatch(setData(user))
-                router.replace('/(mainapp)/homescreen/')
+                const userCheck = await dispatch(checkUserData({ uid: user.uid }))
+                if (userCheck.payload) {
+                    router.replace('/(mainapp)/(tabs)/homescreen/')
+                } else {
+                    router.replace('/setProfile/')
+                }
             } if (!user) {
                 router.replace('/(auth)/splashscreen/')
             }

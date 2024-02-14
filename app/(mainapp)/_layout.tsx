@@ -1,14 +1,14 @@
 import React from 'react'
-import { Tabs } from 'expo-router'
+import { Stack } from 'expo-router'
+import { useTranslation } from 'react-i18next'
 
 export default function _layout() {
+    const { t } = useTranslation()
     return (
-        <Tabs screenOptions={{ headerShown: false }}>
-            <Tabs.Screen name='homescreen/index' />
-            <Tabs.Screen name='activityscreen/index' />
-            <Tabs.Screen name='coachingscreen/index' />
-            <Tabs.Screen name='mealscreen/index' />
-            <Tabs.Screen name='profilescreen/index' />
-        </Tabs>
+        <Stack initialRouteName='(tabs)'>
+            <Stack.Screen name='(tabs)' options={{ headerShown: false }} />
+            <Stack.Screen name='(otherscreens)/bmiscreen/index' options={{ animation: 'ios', headerTitle: t('homeScreen.bmiWidget.bmi') }} />
+            <Stack.Screen name='(otherscreens)/notificationscreen/index' options={{ animation: 'ios', headerTitle: t('notificationScreen.notification') }} />
+        </Stack>
     )
 }

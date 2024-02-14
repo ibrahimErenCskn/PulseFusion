@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
 import authSlice from './reducers/authSlice'
-import themeChange from './reducers/themeChange'
+import firestoreSlice from './reducers/firestore'
+import calculateSlice from './reducers/calculateSlice'
 
 export const store = configureStore({
   reducer: {
     auth: authSlice,
-    theme: themeChange
+    userData: firestoreSlice,
+    calculate: calculateSlice
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware({ serializableCheck: false })
 })
