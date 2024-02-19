@@ -5,14 +5,15 @@ import { Dimensions, View, ViewStyle } from 'react-native'
 interface WidgetContainerProps {
     setHeight: number
     customStyle?: ViewStyle
+    setBorderRadius?: number
     children: React.ReactElement
 }
 
 const { width } = Dimensions.get('window')
 
-export default function WidgetContainer({ customStyle, children, setHeight }: WidgetContainerProps) {
+export default function WidgetContainer({ customStyle, children, setHeight, setBorderRadius }: WidgetContainerProps) {
     return (
-        <View style={[{ backgroundColor: COLOR.appContainerColor, width: width * .9, height: setHeight, alignSelf: 'center', borderRadius: setHeight * 0.1, marginVertical: 10 }, customStyle]}>
+        <View style={[{ backgroundColor: COLOR.appContainerColor, width: width * .9, height: setHeight, alignSelf: 'center', borderRadius: setBorderRadius ? setBorderRadius : setHeight * .12, marginVertical: 10 }, customStyle]}>
             {children}
         </View>
     )

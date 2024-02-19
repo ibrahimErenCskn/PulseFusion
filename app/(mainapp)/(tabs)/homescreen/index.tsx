@@ -11,6 +11,7 @@ import { PieChart } from "react-native-gifted-charts";
 import firestore from '@react-native-firebase/firestore';
 import auth from '@react-native-firebase/auth';
 import { setBmi } from '@/services/redux/reducers/calculateSlice'
+import { getUserData } from '@/services/redux/reducers/firestore'
 
 const userUid: any = auth()?.currentUser?.uid
 
@@ -19,7 +20,7 @@ export default function HomeScreen() {
     const [pieBmiData, setPieBmiData] = useState<any>()
     const dispatch = useDispatch()
     const { t } = useTranslation()
-    function bmiHesapla(boy: any, kilo: any) {
+    function bmiHesapla(boy: any, kilo: any, bmiFullData: any) {
         const metreBoy = boy / 100;
         const bmi: any = (kilo / (metreBoy * metreBoy));
         let bmiName;
@@ -45,7 +46,7 @@ export default function HomeScreen() {
             bmiName,
             bmi
         ])
-        dispatch(setBmi({ bmi, bmiName }))
+        dispatch(setBmi({ bmi, bmiName, bmiFullData }))
     }
     useEffect(() => {
         const unsubscribe = firestore()
@@ -54,7 +55,7 @@ export default function HomeScreen() {
             .onSnapshot(
                 (documentSnapshot) => {
                     const data: any = documentSnapshot.data();
-                    bmiHesapla(data.height, data.weight)
+                    bmiHesapla(data.height, data.weight, data)
                 },
                 (error) => {
                     console.error(error);
@@ -112,8 +113,13 @@ export default function HomeScreen() {
                         </View>
                     </View>
                 </WidgetContainer>
-                <WidgetContainer setHeight={400}>
-                    <Text>Naber</Text>
+                <WidgetContainer setHeight={80} customStyle={{ padding: 10, justifyContent: 'center' }} setBorderRadius={18}>
+                    <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+                        <Text style={{ color: 'white', fontSize: 20 }}>
+                            Today Target
+                        </Text>
+                        <CustomButton title='Check' onP={() => router.push('/(mainapp)/(tabs)/activityscreen/')} customStyle={{ width: 120, height: 50 }} customTextStyle={{ fontSize: 18 }} />
+                    </View>
                 </WidgetContainer>
                 <WidgetContainer setHeight={400}>
                     <Text>Naber</Text>

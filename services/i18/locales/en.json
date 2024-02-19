@@ -35,6 +35,40 @@
             }
         }
     },
+    "bmiIndexScreen": {
+        "target": "Your target",
+        "motivation": "Motivation",
+        "underweight": {
+            "target": "Achieving a healthy weight.",
+            "motivation": "Make sure you get enough nutrients and focus on gaining muscle mass. Eat a balanced and nutritious diet and exercise regularly."
+        },
+        "normal": {
+            "target": "Maintain your current weight",
+            "motivation": "Maintain a healthy lifestyle. Eat a balanced and nutritious diet and exercise regularly."
+        },
+        "overweight": {
+            "target": "Getting rid of excess weight and achieving a healthy weight.",
+            "motivation": "Start making small and sustainable changes to achieve a healthy weight. Reduce your calorie intake in a controlled way and exercise regularly."
+        },
+        "obese": {
+            "target": "Getting rid of excess weight and achieving a healthy weight.",
+            "motivation": "Embark on a weight loss journey for long-term health. Create a customized plan in consultation with your doctor or dietitian. With regular exercise and a healthy diet, you can reach your goal."
+        }
+    },
+    "profileScreen": {
+        "details-profile-widget": {
+            "button-text": "Edit",
+            "height": "Height",
+            "weight": "Weight",
+            "age": "Age"
+        }
+    },
+    "profileEditScreen": {
+        "edit-profile": "Edit Profile"
+    },
+    "translation": {
+        "height": "Height"
+    },
     "notificationScreen": {
         "notification": "Notifications"
     }

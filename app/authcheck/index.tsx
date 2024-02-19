@@ -13,7 +13,7 @@ export default function AuthCheck() {
         auth().onAuthStateChanged(async (user) => {
             if (user) {
                 dispatch(setData(user))
-                const userCheck = await dispatch(checkUserData({ uid: user.uid }))
+                const userCheck = await dispatch(checkUserData({ uid: user.uid, userDataName: "userData" }))
                 if (userCheck.payload) {
                     router.replace('/(mainapp)/(tabs)/homescreen/')
                 } else {

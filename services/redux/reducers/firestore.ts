@@ -4,12 +4,14 @@ import auth from '@react-native-firebase/auth';
 
 
 interface UserProps {
-    uid: string
+    uid?: string
+    userDataName: string
 }
 
-export const checkUserData: any = createAsyncThunk('user/checkuserdata', async ({ uid }: UserProps) => {
+export const checkUserData: any = createAsyncThunk('user/checkuserdata', async ({ uid, userDataName }: UserProps) => {
     try {
-        const userRef = firestore().collection(uid).doc('userData');
+        const userUid: any = auth()?.currentUser?.uid
+        const userRef = firestore().collection(uid ? uid : userUid).doc(userDataName);
         const userDoc = await userRef.get();
         if (userDoc.exists) return true
         else return false
@@ -46,13 +48,31 @@ export const writeDataInUsers: any = createAsyncThunk('user/writedatainusers', a
     }
 })
 
+
+interface UserProps {
+    userDataName: string
+}
+
+export const getUserData: any = createAsyncThunk('user/getuserdata', async ({ userDataName }: UserProps) => {
+    try {
+        const userUid: any = auth()?.currentUser?.uid
+        const userRef = firestore().collection(userUid).doc(userDataName);
+        const userDoc = (await userRef.get()).data();
+        return userDoc
+    } catch (err) {
+        console.log(err)
+        throw err
+    }
+})
+
+
 export interface FirestoreSliceInitialProps {
-    data: object
+    mealData: object
     isLoading: boolean
 }
 
 const initialState: FirestoreSliceInitialProps = {
-    data: {},
+    mealData: {},
     isLoading: false
 }
 
@@ -79,6 +99,16 @@ export const firestoreSlice = createSlice({
                 state.isLoading = false
             })
             .addCase(writeDataInUsers.rejected, (state) => {
+                state.isLoading = false
+            })
+            .addCase(getUserData.pending, (state) => {
+                state.isLoading = true
+            })
+            .addCase(getUserData.fulfilled, (state, action) => {
+                state.isLoading = false
+                state.mealData = action.payload
+            })
+            .addCase(getUserData.rejected, (state) => {
                 state.isLoading = false
             })
     }
