@@ -8,62 +8,26 @@ import { router } from 'expo-router'
 import WidgetContainer from '@/components/WidgetContainer'
 import CustomButton from '@/components/CustomButton'
 import { PieChart } from "react-native-gifted-charts";
-import firestore from '@react-native-firebase/firestore';
-import auth from '@react-native-firebase/auth';
-import { setBmi } from '@/services/redux/reducers/calculateSlice'
-import { getUserData } from '@/services/redux/reducers/firestore'
+import { setBmi, setUserInfo } from '@/services/redux/reducers/dataSlice'
+import { addListenerData } from '@/services/utils/dataListener'
 
-const userUid: any = auth()?.currentUser?.uid
 
 export default function HomeScreen() {
     const { data } = useSelector((state: any) => state.auth)
-    const [pieBmiData, setPieBmiData] = useState<any>()
+    const { bmiIndex } = useSelector((state: any) => state.allData)
     const dispatch = useDispatch()
     const { t } = useTranslation()
-    function bmiHesapla(boy: any, kilo: any, bmiFullData: any) {
-        const metreBoy = boy / 100;
-        const bmi: any = (kilo / (metreBoy * metreBoy));
-        let bmiName;
-        if (bmi < 18.5) {
-            bmiName = t('homeScreen.bmiWidget.bmiIndexName.underweight');
-        } else if (bmi >= 18.5 && bmi < 25) {
-            bmiName = t('homeScreen.bmiWidget.bmiIndexName.normal');
-        } else if (bmi >= 25 && bmi < 30) {
-            bmiName = t('homeScreen.bmiWidget.bmiIndexName.overweight');
-        } else {
-            bmiName = t('homeScreen.bmiWidget.bmiIndexName.obese');
-        }
-        setPieBmiData([
-            [
-                {
-                    value: bmi,
-                    color: '#009FFF',
-                    gradientCenterColor: '#006DFF',
-                    focused: true,
-                },
-                { value: bmi > 32 ? 0 : 32 - bmi, color: '#93FCF8', gradientCenterColor: '#3BE9DE' },
-            ],
-            bmiName,
-            bmi
-        ])
-        dispatch(setBmi({ bmi, bmiName, bmiFullData }))
-    }
-    useEffect(() => {
-        const unsubscribe = firestore()
-            .collection(userUid)
-            .doc("userData")
-            .onSnapshot(
-                (documentSnapshot) => {
-                    const data: any = documentSnapshot.data();
-                    bmiHesapla(data.height, data.weight, data)
-                },
-                (error) => {
-                    console.error(error);
-                }
-            );
+    const [userData, setUserData] = useState<any>()
 
-        return unsubscribe;
+    useEffect(() => {
+        addListenerData({ setData: setUserData, dataName: 'userData' })
     }, [])
+    useEffect(() => {
+        if (userData) {
+            dispatch(setBmi(userData))
+            dispatch(setUserInfo(userData))
+        }
+    }, [userData])
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }}>
             <View style={{ paddingTop: 6, paddingHorizontal: 10, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -94,31 +58,33 @@ export default function HomeScreen() {
                                 customTextStyle={{ fontSize: 18 }} />
                         </View>
                         <View style={{ height: '100%', alignItems: 'center', justifyContent: 'center' }}>
-                            {pieBmiData && <PieChart
-                                data={pieBmiData[0]}
-                                donut
-                                showGradient
-                                sectionAutoFocus
-                                radius={60}
-                                innerRadius={40}
-                                innerCircleColor={'#232B5D'}
-                                centerLabelComponent={() => {
-                                    return (
-                                        <View>
-                                            <Text style={{ color: 'white', fontSize: 20, fontWeight: 'bold' }}>{pieBmiData[2] && pieBmiData[2].toFixed(1)}</Text>
-                                        </View>
-                                    );
-                                }}
-                            />}
+                            {
+                                bmiIndex[0] && <PieChart
+                                    data={bmiIndex ? bmiIndex[0] : []}
+                                    donut
+                                    showGradient
+                                    sectionAutoFocus
+                                    radius={60}
+                                    innerRadius={40}
+                                    innerCircleColor={'#232B5D'}
+                                    centerLabelComponent={() => {
+                                        return (
+                                            <View>
+                                                <Text style={{ color: 'white', fontSize: 20, fontWeight: 'bold' }}>{t(`homeScreen.bmiWidget.bmiIndexName.${bmiIndex[1].bmiName.toLowerCase()}`)}</Text>
+                                            </View>
+                                        );
+                                    }}
+                                />
+                            }
                         </View>
                     </View>
                 </WidgetContainer>
                 <WidgetContainer setHeight={80} customStyle={{ padding: 10, justifyContent: 'center' }} setBorderRadius={18}>
                     <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
                         <Text style={{ color: 'white', fontSize: 20 }}>
-                            Today Target
+                            Günlük Hedefler
                         </Text>
-                        <CustomButton title='Check' onP={() => router.push('/(mainapp)/(tabs)/activityscreen/')} customStyle={{ width: 120, height: 50 }} customTextStyle={{ fontSize: 18 }} />
+                        <CustomButton title='Kontrol Et' onP={() => router.push('/(mainapp)/(tabs)/activityscreen/')} customStyle={{ width: 120, height: 50 }} customTextStyle={{ fontSize: 18 }} />
                     </View>
                 </WidgetContainer>
                 <WidgetContainer setHeight={400}>

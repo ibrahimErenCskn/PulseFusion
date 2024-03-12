@@ -10,7 +10,7 @@ const languageResource = {
 
 i18next.use(initReactI18next).init({
     compatibilityJSON: 'v3',
-    lng: 'en',
+    lng: 'tr',
     fallbackLng: 'en',
     resources: languageResource,
     interpolation: {

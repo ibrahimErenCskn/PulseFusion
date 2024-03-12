@@ -8,7 +8,7 @@ import CustomTextInput from '@/components/CustomTextInput'
 import CustomButton from '@/components/CustomButton'
 import { useTranslation } from 'react-i18next'
 import COLOR from '@/constants/Colors'
-import CustomModal from '@/components/CustomModal'
+import CustomInputModal from '@/components/CustomInputModal'
 import { GenderData } from '@/services/utils/fixedData/data'
 import { Foundation, MaterialIcons, FontAwesome5 } from '@expo/vector-icons';
 import CustomDatePicker from '@/components/CustomDatePicker'
@@ -53,7 +53,7 @@ export default function SetProfile() {
                                     <Text style={{ textAlign: 'center', fontWeight: 'bold', fontSize: 22 }}>{t('setProfileScreen.complete-profile-text')}</Text>
                                 </View>
                                 <View style={{ flex: 1, width: '100%', alignItems: 'center', gap: 30 }}>
-                                    <CustomModal
+                                    <CustomInputModal
                                         data={GenderData}
                                         setFieldValue={setFieldValue}
                                         setValueName='gender'

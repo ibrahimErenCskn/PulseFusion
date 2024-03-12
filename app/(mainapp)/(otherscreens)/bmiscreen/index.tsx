@@ -8,7 +8,7 @@ import BmiDetails from '@/components/BmiDetails';
 
 export default function BmiScreen() {
     const { t } = useTranslation()
-    const { bmiIndex } = useSelector((state: any) => state.calculate)
+    const { bmiIndex } = useSelector((state: any) => state.allData)
     return (
         <View
             style={{
@@ -29,15 +29,7 @@ export default function BmiScreen() {
                 </Text>
                 <View style={{ padding: 20, alignItems: 'center' }}>
                     <PieChart
-                        data={[
-                            {
-                                value: bmiIndex?.bmi,
-                                color: '#009FFF',
-                                gradientCenterColor: '#006DFF',
-                                focused: true,
-                            },
-                            { value: bmiIndex?.bmi > 32 ? 0 : 32 - bmiIndex?.bmi, color: '#93FCF8', gradientCenterColor: '#3BE9DE' },
-                        ]}
+                        data={bmiIndex ? bmiIndex[0] : []}
                         donut
                         showGradient
                         sectionAutoFocus
@@ -49,15 +41,15 @@ export default function BmiScreen() {
                                 <View style={{ justifyContent: 'center', alignItems: 'center' }}>
                                     <Text
                                         style={{ fontSize: 22, color: 'white', fontWeight: 'bold' }}>
-                                        {bmiIndex?.bmi.toFixed(1)}
+                                        {bmiIndex[0][0]?.value.toFixed(1)}
                                     </Text>
-                                    <Text style={{ fontSize: 14, color: 'white' }}>{t(`homeScreen.bmiWidget.bmiIndexName.${bmiIndex.bmiName.toLowerCase()}`)}</Text>
+                                    <Text style={{ fontSize: 14, color: 'white' }}>{t(`homeScreen.bmiWidget.bmiIndexName.${bmiIndex[1].bmiName.toLowerCase()}`)}</Text>
                                 </View>
                             );
                         }}
                     />
                 </View>
-                <BmiDetails bmiDetailsName={bmiIndex.bmiName} />
+                <BmiDetails bmiDetailsName={bmiIndex[1].bmiName} />
             </View>
         </View>
     )

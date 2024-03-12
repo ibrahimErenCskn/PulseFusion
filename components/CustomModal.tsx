@@ -1,48 +1,30 @@
-import { View, Text, Modal, Pressable, FlatList, ViewStyle } from 'react-native'
-import React, { useState } from 'react'
+import { useState } from 'react'
+import { View, Text, Modal, Pressable, ViewStyle } from 'react-native'
 import Animated, { ZoomInDown } from 'react-native-reanimated'
 
-
 interface CustomModalProps {
-    data: Array<object> | any
-    setFieldValue?: any
-    setValueName?: string
-    text: string
-    customInputStyle?: ViewStyle
-    icon?: React.ReactElement
+    buttonText: string
+    buttonStyle: ViewStyle
+    children: React.ReactElement
+    visible: boolean
+    setVisible: Function
 }
 
-export default function CustomModal({ text, data, setFieldValue, setValueName, customInputStyle, icon }: CustomModalProps) {
-    const [visibleModal, setVisibleModal] = useState(false)
-    const [value, setValue] = useState<any>(null)
+export default function CustomModal({ buttonText, buttonStyle, children, visible, setVisible }: CustomModalProps) {
+
+
     return (
-        <View style={{ alignItems: 'center', width: '80%' }}>
-            <View style={{ width: '100%', height: 55, backgroundColor: 'rgba(230,230,230,.6)', borderRadius: 40 }}>
-                <Pressable onPress={() => setVisibleModal(!visibleModal)} style={[{ flex: 1, justifyContent: 'center', paddingLeft: 10 }, customInputStyle]}>
-                    {value ? (<View style={{ flexDirection: 'row', alignItems: 'center', gap: 2 }}>
-                        {value[0]}
-                        <Text style={{ fontSize: 16, fontWeight: '400' }}>{value[1]}</Text>
-                    </View>) : (<View style={{ flexDirection: 'row', alignItems: 'center', gap: 4 }}>
-                        {icon}
-                        <Text style={{ fontSize: 16, fontWeight: '400' }}>{text}</Text>
-                    </View>)}
-                </Pressable>
-            </View>
-            <Modal transparent visible={visibleModal} animationType='fade'>
-                <View style={{ flex: 1, backgroundColor: 'rgba(0,0,0,0.3)', justifyContent: 'center' }}>
-                    <Animated.View entering={ZoomInDown.duration(300)} style={{ alignSelf: 'center', backgroundColor: 'white', width: '80%', height: '60%', borderRadius: 20 }}>
-                        <FlatList data={data} renderItem={({ item }) => (
-                            <View style={{ width: '100%', height: 50, borderBottomWidth: 2, borderTopLeftRadius: 20, borderTopRightRadius: 20 }}>
-                                <Pressable style={{ flex: 1, alignItems: 'center', paddingLeft: 10, flexDirection: 'row', gap: 10 }} onPress={() => {
-                                    setFieldValue(setValueName, item.value)
-                                    setVisibleModal(!visibleModal)
-                                    setValue([item?.icon, item.name])
-                                }}>
-                                    {item?.icon}
-                                    <Text style={{ fontSize: 16, fontWeight: '700' }}>{item.name}</Text>
-                                </Pressable>
-                            </View>
-                        )} />
+        <View style={buttonStyle}>
+            <Pressable onPress={() => setVisible(!visible)} style={{ alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 20, fontWeight: '700' }}>{buttonText}</Text>
+            </Pressable>
+            <Modal visible={visible} transparent>
+                <View style={{ flex: 1, alignItems: 'center', backgroundColor: 'rgba(0,0,0,0.4)', justifyContent: 'center' }}>
+                    <Animated.View entering={ZoomInDown.duration(300)}>
+                        <Pressable onPress={() => setVisible(!visible)}>
+                            <Text>Modalı Kapat</Text>
+                        </Pressable>
+                        {children}
                     </Animated.View>
                 </View>
             </Modal>

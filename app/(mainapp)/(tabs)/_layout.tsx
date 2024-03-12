@@ -5,6 +5,7 @@ import { View } from 'react-native';
 import COLOR from '@/constants/Colors';
 
 export default function _layout() {
+
     return (
         <Tabs initialRouteName='homescreen/index' screenOptions={{ headerShown: false, tabBarStyle: { backgroundColor: COLOR.authColor }, tabBarShowLabel: false, tabBarActiveTintColor: 'black', tabBarInactiveTintColor: 'black', headerShadowVisible: false }}>
             <Tabs.Screen name='homescreen/index' options={{

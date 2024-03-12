@@ -48,36 +48,29 @@ export const writeDataInUsers: any = createAsyncThunk('user/writedatainusers', a
     }
 })
 
-
-interface UserProps {
-    userDataName: string
-}
-
-export const getUserData: any = createAsyncThunk('user/getuserdata', async ({ userDataName }: UserProps) => {
+export const getUserData: any = createAsyncThunk('user/getUserData', async ({ userDataName }: UserProps) => {
     try {
         const userUid: any = auth()?.currentUser?.uid
         const userRef = firestore().collection(userUid).doc(userDataName);
-        const userDoc = (await userRef.get()).data();
-        return userDoc
+        const userDoc = await userRef.get();
+        console.log(userDoc.data())
+        return userDoc.data()
     } catch (err) {
         console.log(err)
         throw err
     }
 })
 
-
 export interface FirestoreSliceInitialProps {
-    mealData: object
     isLoading: boolean
 }
 
 const initialState: FirestoreSliceInitialProps = {
-    mealData: {},
     isLoading: false
 }
 
 export const firestoreSlice = createSlice({
-    name: 'auth',
+    name: 'firestore',
     initialState,
     reducers: {
     },
@@ -99,16 +92,6 @@ export const firestoreSlice = createSlice({
                 state.isLoading = false
             })
             .addCase(writeDataInUsers.rejected, (state) => {
-                state.isLoading = false
-            })
-            .addCase(getUserData.pending, (state) => {
-                state.isLoading = true
-            })
-            .addCase(getUserData.fulfilled, (state, action) => {
-                state.isLoading = false
-                state.mealData = action.payload
-            })
-            .addCase(getUserData.rejected, (state) => {
                 state.isLoading = false
             })
     }

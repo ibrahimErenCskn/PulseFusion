@@ -21,7 +21,7 @@ export default function RegisterScreen() {
         <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()} touchSoundDisabled>
             <SafeAreaView style={{ flex: 1, backgroundColor: COLOR.authColor, paddingVertical: 10 }}>
                 <ScrollView>
-                    <View style={{ height: height * 0.25, alignItems: 'center' }}>
+                    <View style={{ height: height * 0.22, alignItems: 'center' }}>
                         <LottieAnim speed={0.8} anim={require('@/services/lottie/Anim/LoginAnim.json')} width={height * 0.3} height={height * 0.3} />
                     </View>
                     <View style={{ height: height * 0.45 }}>

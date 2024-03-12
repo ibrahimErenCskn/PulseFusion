@@ -29,6 +29,50 @@
             }
         }
     },
+    "bmiIndexScreen": {
+        "target": "Hedefiniz",
+        "motivation": "Motivasyon",
+        "underweight": {
+            "target": "Sağlıklı bir kiloya ulaşmak.",
+            "motivation": "Yeterli besin aldığınızdan emin olun ve kas kütlesi kazanmaya odaklanın. Dengeli ve besleyici bir diyet yiyin ve düzenli olarak egzersiz yapın."
+        },
+        "normal": {
+            "target": "Mevcut kilonuzu koruyun",
+            "motivation": "Sağlıklı bir yaşam tarzı sürdürün. Dengeli ve besleyici bir diyet yiyin ve düzenli olarak egzersiz yapın."
+        },
+        "overweight": {
+            "target": "Fazla kilolardan kurtulmak ve sağlıklı kiloya ulaşmak.",
+            "motivation": "Sağlıklı bir kiloya ulaşmak için küçük ve sürdürülebilir değişiklikler yapmaya başlayın. Kalori alımınızı kontrollü bir şekilde azaltın ve düzenli egzersiz yapın."
+        },
+        "obese": {
+            "target": "Fazla kilolardan kurtulmak ve sağlıklı kiloya ulaşmak.",
+            "motivation": "Uzun vadeli sağlık için kilo verme yolculuğuna çıkın. Doktorunuza veya diyetisyeninize danışarak size özel bir plan oluşturun. Düzenli egzersiz ve sağlıklı beslenme ile hedefinize ulaşabilirsiniz."
+        }
+    },
+    "profileScreen": {
+        "details-profile-widget": {
+            "button-text": "Düzenle",
+            "height": "Boy",
+            "weight": "Kilo",
+            "age": "Yaş"
+        }
+    },
+    "profileEditScreen": {
+        "edit-profile": "Profili Düzenle"
+    },
+    "mealPlannerScreen": {
+        "calories": "Kalori",
+        "protein": "Protein",
+        "fat": "Yağ",
+        "carbonhidrat": "Karbonhidrat",
+        "meals": "Öğün"
+    },
+    "addMealsScreen": {
+        "title": "Öğün Ekle"
+    },
+    "translation": {
+        "height": "Boy"
+    },
     "notificationScreen": {
         "notification": "Bildirimler"
     }
