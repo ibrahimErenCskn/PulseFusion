@@ -65,6 +65,9 @@
         "protein": "Protein",
         "fat": "Yağ",
         "carbonhidrat": "Karbonhidrat",
+        "meal_one": "Kahvaltı",
+        "meal_two": "Öğle Yemeği",
+        "meal_three": "Akşam Yemeği",
         "meals": "Öğün"
     },
     "addMealsScreen": {

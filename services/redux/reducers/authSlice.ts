@@ -115,7 +115,6 @@ export const authSlice = createSlice({
             })
             .addCase(logaut.fulfilled, (state, action) => {
                 state.isLoading = false
-                state.data = action.payload
                 console.log("Çıkış Yapıldı")
             })
             .addCase(logaut.rejected, (state) => {

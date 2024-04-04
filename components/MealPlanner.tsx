@@ -12,9 +12,10 @@ interface MealPlannerProps {
     mealsCalories?: number,
     mealsNumber?: number
     customStyle?: ViewStyle
+    routeFunc?: any
 }
 
-export default function MealPlanner({ mealTypeText, children, setHeight, mealsCalories, mealsNumber, customStyle }: MealPlannerProps) {
+export default function MealPlanner({ mealTypeText, children, setHeight, mealsCalories, mealsNumber, customStyle, routeFunc }: MealPlannerProps) {
     const { t } = useTranslation()
     return (
         <WidgetContainer customStyle={{ padding: 12 }} setHeight={setHeight ? setHeight : undefined}>
@@ -23,7 +24,7 @@ export default function MealPlanner({ mealTypeText, children, setHeight, mealsCa
                     <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
                         <Text style={{ fontWeight: 'bold', fontSize: 20 }}>{mealTypeText}</Text>
                         {mealsCalories && mealsNumber ? (
-                            <Pressable onPress={() => router.push('/(mainapp)/(otherscreens)/addMealScreen/')}>
+                            <Pressable onPress={routeFunc ? routeFunc : () => console.log("Route Belirlenmedi")}>
                                 <AntDesign name="pluscircleo" size={24} color="white" />
                             </Pressable>
                         ) : null}

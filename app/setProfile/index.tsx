@@ -42,7 +42,7 @@ export default function SetProfile() {
                                 }
                             ))
                             if (!isLoading) {
-                                router.replace('/(mainapp)/(tabs)/homescreen/')
+                                router.replace('/setmeal/')
                             }
                         }}
                     >

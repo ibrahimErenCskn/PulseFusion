@@ -10,10 +10,8 @@ interface SelectedButtonProps {
 
 
 export default function SelectedButton({ data, setData, setFieldValue, type }: SelectedButtonProps) {
-
-
     const handlePress = (index: number) => {
-        const updatedData = data.map((item: Array<object>, i: number) => {
+        const updatedData = data.map((item: any, i: number) => {
             if (i === index) {
                 setFieldValue(type, item)
                 return { ...item, active: true };

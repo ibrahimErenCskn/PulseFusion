@@ -6,6 +6,7 @@ export interface dataSliceInitialProps {
     mealData: object
     bmiIndex: object
     userData: object
+    activityData: object,
     dayCalories: number
 }
 
@@ -13,6 +14,7 @@ const initialState: dataSliceInitialProps = {
     userData: {},
     mealData: {},
     bmiIndex: {},
+    activityData: {},
     dayCalories: 0
 }
 
@@ -34,12 +36,22 @@ export const dataSlice = createSlice({
                 state.dayCalories = CalculateCalories({ moveType: state.mealData?.type1.activitiyType, activityType: state.mealData?.type2.activitiyType, age: 23, gender: state.userData.gender, height: state.userData.height, weight: state.userData.weight })
             }
             if (action.payload.gender === 'Female') {
-                console.log(action.payload)
+                state.dayCalories = CalculateCalories({ moveType: state.mealData?.type1.activitiyType, activityType: state.mealData?.type2.activitiyType, age: 23, gender: state.userData.gender, height: state.userData.height, weight: state.userData.weight })
             }
+        },
+        setActivityData: (state, action) => {
+            state.activityData = action.payload
+        },
+        resetData(state) {
+            state.mealData = {}
+            state.bmiIndex = {}
+            state.userData = {}
+            state.activityData = {}
+            state.dayCalories = 0
         }
     },
 })
 
-export const { addMealData, setBmi, dayCaloriesCalculate, setUserInfo } = dataSlice.actions
+export const { addMealData, setBmi, dayCaloriesCalculate, setUserInfo, setActivityData, resetData } = dataSlice.actions
 
 export default dataSlice.reducer

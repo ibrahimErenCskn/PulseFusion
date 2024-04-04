@@ -1,0 +1,3472 @@
+[
+    {
+        "id": 1,
+        "name": "Bıldırcın",
+        "weight": "gr",
+        "protein": "19,6",
+        "suger": "0",
+        "fat": "12,1",
+        "cholesterol": "-",
+        "calories": "192"
+    },
+    {
+        "id": 2,
+        "name": "Güvercin",
+        "weight": "gr",
+        "protein": "18,5",
+        "suger": "0",
+        "fat": "23,8",
+        "cholesterol": "-",
+        "calories": "294"
+    },
+    {
+        "id": 3,
+        "name": "Sülün",
+        "weight": "gr",
+        "protein": "22,7",
+        "suger": "0",
+        "fat": "9,3",
+        "cholesterol": "-",
+        "calories": "181"
+    },
+    {
+        "id": 4,
+        "name": "Tavşan",
+        "weight": "gr",
+        "protein": "21",
+        "suger": "0",
+        "fat": "8",
+        "cholesterol": "-",
+        "calories": "162"
+    },
+    {
+        "id": 5,
+        "name": "Alabalık",
+        "weight": "gr",
+        "protein": "18,3",
+        "suger": "0",
+        "fat": "9",
+        "cholesterol": "71",
+        "calories": "175"
+    },
+    {
+        "id": 6,
+        "name": "BalıkUnu",
+        "weight": "gr",
+        "protein": "78",
+        "suger": "-",
+        "fat": "0,3",
+        "cholesterol": "-",
+        "calories": "336"
+    },
+    {
+        "id": 7,
+        "name": "Kalkan",
+        "weight": "gr",
+        "protein": "148",
+        "suger": "0",
+        "fat": "14,4",
+        "cholesterol": "-",
+        "calories": "193"
+    },
+    {
+        "id": 8,
+        "name": "Kılıç",
+        "weight": "gr",
+        "protein": "26,3",
+        "suger": "-",
+        "fat": "5,6",
+        "cholesterol": "-",
+        "calories": "164"
+    },
+    {
+        "id": 9,
+        "name": "Levrek",
+        "weight": "gr",
+        "protein": "19,2",
+        "suger": "0",
+        "fat": "1,2",
+        "cholesterol": "-",
+        "calories": "93"
+    },
+    {
+        "id": 10,
+        "name": "Mersin",
+        "weight": "gr",
+        "protein": "17,7",
+        "suger": "0",
+        "fat": "2,3",
+        "cholesterol": "-",
+        "calories": "96"
+    },
+    {
+        "id": 11,
+        "name": "Palamut",
+        "weight": "gr",
+        "protein": "24",
+        "suger": "0",
+        "fat": "7,3",
+        "cholesterol": "-",
+        "calories": "168"
+    },
+    {
+        "id": 12,
+        "name": "Sardalya",
+        "weight": "gr",
+        "protein": "19,2",
+        "suger": "0",
+        "fat": "8,6",
+        "cholesterol": "70",
+        "calories": "160"
+    },
+    {
+        "id": 13,
+        "name": "Sardalya(konserve)",
+        "weight": "gr",
+        "protein": "24",
+        "suger": "0",
+        "fat": "11",
+        "cholesterol": "-",
+        "calories": "205"
+    },
+    {
+        "id": 14,
+        "name": "Somon",
+        "weight": "gr",
+        "protein": "20,3",
+        "suger": "0",
+        "fat": "8,2",
+        "cholesterol": "60",
+        "calories": "155"
+    },
+    {
+        "id": 15,
+        "name": "Ton",
+        "weight": "gr",
+        "protein": "22,8",
+        "suger": "0",
+        "fat": "22",
+        "cholesterol": "55",
+        "calories": "289"
+    },
+    {
+        "id": 16,
+        "name": "TuzluBalık",
+        "weight": "gr",
+        "protein": "18,5",
+        "suger": "0",
+        "fat": "25,1",
+        "cholesterol": "-",
+        "calories": "305"
+    },
+    {
+        "id": 17,
+        "name": "Uskumru",
+        "weight": "gr",
+        "protein": "21,9",
+        "suger": "0",
+        "fat": "7,3",
+        "cholesterol": "-",
+        "calories": "159"
+    },
+    {
+        "id": 18,
+        "name": "AyçiçeğiYağı",
+        "weight": "gr",
+        "protein": "0",
+        "suger": "0",
+        "fat": "100",
+        "cholesterol": "-",
+        "calories": "884"
+    },
+    {
+        "id": 19,
+        "name": "FındıkYağı",
+        "weight": "gr",
+        "protein": "0",
+        "suger": "0",
+        "fat": "100",
+        "cholesterol": "-",
+        "calories": "884"
+    },
+    {
+        "id": 20,
+        "name": "HaşhaşYağı",
+        "weight": "gr",
+        "protein": "0",
+        "suger": "0",
+        "fat": "100",
+        "cholesterol": "-",
+        "calories": "884"
+    },
+    {
+        "id": 21,
+        "name": "Ketentohumuyağı",
+        "weight": "gr",
+        "protein": "0",
+        "suger": "0",
+        "fat": "100",
+        "cholesterol": "-",
+        "calories": "884"
+    },
+    {
+        "id": 22,
+        "name": "Margarin(kahvaltılık)",
+        "weight": "gr",
+        "protein": "0",
+        "suger": "0,9",
+        "fat": "80,5",
+        "cholesterol": "-",
+        "calories": "719"
+    },
+    {
+        "id": 23,
+        "name": "Margarin(kahvaltılık)",
+        "weight": "gr",
+        "protein": "0",
+        "suger": "-",
+        "fat": "82",
+        "cholesterol": "-",
+        "calories": "720"
+    },
+    {
+        "id": 24,
+        "name": "MısırözüYağı",
+        "weight": "gr",
+        "protein": "0",
+        "suger": "0",
+        "fat": "100",
+        "cholesterol": "-",
+        "calories": "884"
+    },
+    {
+        "id": 25,
+        "name": "NebatiYağ",
+        "weight": "gr",
+        "protein": "0",
+        "suger": "0",
+        "fat": "100",
+        "cholesterol": "-",
+        "calories": "900"
+    },
+    {
+        "id": 26,
+        "name": "PalmiyeYağı",
+        "weight": "gr",
+        "protein": "0",
+        "suger": "0",
+        "fat": "100",
+        "cholesterol": "-",
+        "calories": "884"
+    },
+    {
+        "id": 27,
+        "name": "PamukYağı",
+        "weight": "gr",
+        "protein": "0",
+        "suger": "0",
+        "fat": "100",
+        "cholesterol": "-",
+        "calories": "884"
+    },
+    {
+        "id": 28,
+        "name": "SoyaYağı",
+        "weight": "gr",
+        "protein": "0",
+        "suger": "0",
+        "fat": "100",
+        "cholesterol": "-",
+        "calories": "884"
+    },
+    {
+        "id": 29,
+        "name": "SusamYağı",
+        "weight": "gr",
+        "protein": "0",
+        "suger": "0",
+        "fat": "100",
+        "cholesterol": "-",
+        "calories": "884"
+    },
+    {
+        "id": 30,
+        "name": "YerfıstığıYağı",
+        "weight": "gr",
+        "protein": "0",
+        "suger": "0",
+        "fat": "100",
+        "cholesterol": "-",
+        "calories": "884"
+    },
+    {
+        "id": 31,
+        "name": "ZeytinYağı",
+        "weight": "gr",
+        "protein": "0",
+        "suger": "0",
+        "fat": "100",
+        "cholesterol": "-",
+        "calories": "884"
+    },
+    {
+        "id": 32,
+        "name": "DefneYaprağı",
+        "weight": "gr",
+        "protein": "7,6",
+        "suger": "75",
+        "fat": "8,4",
+        "cholesterol": "-",
+        "calories": "313"
+    },
+    {
+        "id": 33,
+        "name": "DereOtu(Kuru)",
+        "weight": "gr",
+        "protein": "20",
+        "suger": "56",
+        "fat": "4,4",
+        "cholesterol": "-",
+        "calories": "253"
+    },
+    {
+        "id": 34,
+        "name": "Hardal(Toz)",
+        "weight": "gr",
+        "protein": "25",
+        "suger": "35",
+        "fat": "29",
+        "cholesterol": "-",
+        "calories": "469"
+    },
+    {
+        "id": 35,
+        "name": "HaşhaşTohumu",
+        "weight": "gr",
+        "protein": "18",
+        "suger": "23,7",
+        "fat": "45",
+        "cholesterol": "-",
+        "calories": "533"
+    },
+    {
+        "id": 36,
+        "name": "Hindistancevizi(Toz)",
+        "weight": "gr",
+        "protein": "6,4",
+        "suger": "50",
+        "fat": "36,3",
+        "cholesterol": "-",
+        "calories": "525"
+    },
+    {
+        "id": 37,
+        "name": "Karabiber",
+        "weight": "gr",
+        "protein": "11",
+        "suger": "65",
+        "fat": "3,3",
+        "cholesterol": "-",
+        "calories": "255"
+    },
+    {
+        "id": 38,
+        "name": "Karanfil",
+        "weight": "gr",
+        "protein": "6",
+        "suger": "61,2",
+        "fat": "20,1",
+        "cholesterol": "-",
+        "calories": "323"
+    },
+    {
+        "id": 39,
+        "name": "Kekik",
+        "weight": "gr",
+        "protein": "9,1",
+        "suger": "64",
+        "fat": "7,4",
+        "cholesterol": "-",
+        "calories": "276"
+    },
+    {
+        "id": 40,
+        "name": "Kırmızıbiber(toz)",
+        "weight": "gr",
+        "protein": "12",
+        "suger": "57",
+        "fat": "17,3",
+        "cholesterol": "-",
+        "calories": "318"
+    },
+    {
+        "id": 41,
+        "name": "Kimyon(Toz)",
+        "weight": "gr",
+        "protein": "18",
+        "suger": "44,2",
+        "fat": "22,3",
+        "cholesterol": "-",
+        "calories": "375"
+    },
+    {
+        "id": 42,
+        "name": "Kuşüzümü",
+        "weight": "gr",
+        "protein": "1,7",
+        "suger": "13,1",
+        "fat": "0,1",
+        "cholesterol": "-",
+        "calories": "54"
+    },
+    {
+        "id": 43,
+        "name": "Maydonoz(kuru)",
+        "weight": "gr",
+        "protein": "22,4",
+        "suger": "52",
+        "fat": "4,4",
+        "cholesterol": "-",
+        "calories": "276"
+    },
+    {
+        "id": 44,
+        "name": "Nane(Kuru)",
+        "weight": "gr",
+        "protein": "15,1",
+        "suger": "29,8",
+        "fat": "4,9",
+        "cholesterol": "-",
+        "calories": "245"
+    },
+    {
+        "id": 45,
+        "name": "Safran",
+        "weight": "gr",
+        "protein": "11,4",
+        "suger": "65",
+        "fat": "6,5",
+        "cholesterol": "-",
+        "calories": "310"
+    },
+    {
+        "id": 46,
+        "name": "SofraTuzu",
+        "weight": "gr",
+        "protein": "-",
+        "suger": "-",
+        "fat": "-",
+        "cholesterol": "-",
+        "calories": "0"
+    },
+    {
+        "id": 47,
+        "name": "Tarçın(Toz)",
+        "weight": "gr",
+        "protein": "3,9",
+        "suger": "80",
+        "fat": "3,2",
+        "cholesterol": "-",
+        "calories": "261"
+    },
+    {
+        "id": 48,
+        "name": "Zencefil",
+        "weight": "gr",
+        "protein": "9,1",
+        "suger": "71",
+        "fat": "6",
+        "cholesterol": "-",
+        "calories": "347"
+    },
+    {
+        "id": 49,
+        "name": "Zerdecal",
+        "weight": "gr",
+        "protein": "8,2",
+        "suger": "65,3",
+        "fat": "10,1",
+        "cholesterol": "-",
+        "calories": "354"
+    },
+    {
+        "id": 50,
+        "name": "Bezelye",
+        "weight": "gr",
+        "protein": "21",
+        "suger": "50",
+        "fat": "1,2",
+        "cholesterol": "-",
+        "calories": "295"
+    },
+    {
+        "id": 51,
+        "name": "Domates",
+        "weight": "gr",
+        "protein": "7",
+        "suger": "45,4",
+        "fat": "1",
+        "cholesterol": "-",
+        "calories": "219"
+    },
+    {
+        "id": 52,
+        "name": "Ezogelin",
+        "weight": "gr",
+        "protein": "14",
+        "suger": "51,3",
+        "fat": "1,4",
+        "cholesterol": "-",
+        "calories": "274"
+    },
+    {
+        "id": 53,
+        "name": "İşkembe",
+        "weight": "gr",
+        "protein": "20",
+        "suger": "52",
+        "fat": "6",
+        "cholesterol": "-",
+        "calories": "342"
+    },
+    {
+        "id": 54,
+        "name": "Mercimek",
+        "weight": "gr",
+        "protein": "19",
+        "suger": "37,5",
+        "fat": "1",
+        "cholesterol": "-",
+        "calories": "235"
+    },
+    {
+        "id": 55,
+        "name": "Sebze",
+        "weight": "gr",
+        "protein": "11",
+        "suger": "43,2",
+        "fat": "1,1",
+        "cholesterol": "-",
+        "calories": "227"
+    },
+    {
+        "id": 56,
+        "name": "Tarhana(Acı)",
+        "weight": "gr",
+        "protein": "12",
+        "suger": "59",
+        "fat": "1,5",
+        "cholesterol": "-",
+        "calories": "290"
+    },
+    {
+        "id": 57,
+        "name": "Tarhana(tatlı)",
+        "weight": "gr",
+        "protein": "8",
+        "suger": "61",
+        "fat": "0,4",
+        "cholesterol": "-",
+        "calories": "280"
+    },
+    {
+        "id": 58,
+        "name": "Yayla",
+        "weight": "gr",
+        "protein": "8",
+        "suger": "52",
+        "fat": "1,3",
+        "cholesterol": "-",
+        "calories": "252"
+    },
+    {
+        "id": 59,
+        "name": "Yulafçorbası",
+        "weight": "gr",
+        "protein": "6,3",
+        "suger": "62",
+        "fat": "5",
+        "cholesterol": "-",
+        "calories": "318"
+    },
+    {
+        "id": 60,
+        "name": "Havyar",
+        "weight": "gr",
+        "protein": "26,9",
+        "suger": "3,3",
+        "fat": "15",
+        "cholesterol": "300",
+        "calories": "262"
+    },
+    {
+        "id": 61,
+        "name": "İstakoz",
+        "weight": "gr",
+        "protein": "16,9",
+        "suger": "0,5",
+        "fat": "1,9",
+        "cholesterol": "-",
+        "calories": "91"
+    },
+    {
+        "id": 62,
+        "name": "Karides",
+        "weight": "gr",
+        "protein": "18,1",
+        "suger": "1,5",
+        "fat": "0,8",
+        "cholesterol": "125",
+        "calories": "91"
+    },
+    {
+        "id": 63,
+        "name": "Midye",
+        "weight": "gr",
+        "protein": "14,1",
+        "suger": "3,3",
+        "fat": "2,3",
+        "cholesterol": "-",
+        "calories": "95"
+    },
+    {
+        "id": 64,
+        "name": "Yengeç(haşlanmış)",
+        "weight": "gr",
+        "protein": "20,1",
+        "suger": "0",
+        "fat": "5,2",
+        "cholesterol": "0",
+        "calories": "127"
+    },
+    {
+        "id": 65,
+        "name": "Jelatin",
+        "weight": "gr",
+        "protein": "86",
+        "suger": "-",
+        "fat": "0,1",
+        "cholesterol": "-",
+        "calories": "335"
+    },
+    {
+        "id": 66,
+        "name": "Kakao",
+        "weight": "gr",
+        "protein": "17",
+        "suger": "48,3",
+        "fat": "24",
+        "cholesterol": "-",
+        "calories": "299"
+    },
+    {
+        "id": 67,
+        "name": "Maya(kuru)",
+        "weight": "gr",
+        "protein": "36,9",
+        "suger": "39",
+        "fat": "1,6",
+        "cholesterol": "-",
+        "calories": "282"
+    },
+    {
+        "id": 68,
+        "name": "Maya(Yaş)",
+        "weight": "gr",
+        "protein": "12",
+        "suger": "11",
+        "fat": "0,4",
+        "cholesterol": "-",
+        "calories": "86"
+    },
+    {
+        "id": 69,
+        "name": "Sirke",
+        "weight": "gr",
+        "protein": "-",
+        "suger": "6",
+        "fat": "-",
+        "cholesterol": "-",
+        "calories": "12"
+    },
+    {
+        "id": 70,
+        "name": "Tahin",
+        "weight": "gr",
+        "protein": "17",
+        "suger": "21,2",
+        "fat": "53,8",
+        "cholesterol": "-",
+        "calories": "595"
+    },
+    {
+        "id": 71,
+        "name": "Turşu(Salatalık)",
+        "weight": "gr",
+        "protein": "0,6",
+        "suger": "2",
+        "fat": "0,2",
+        "cholesterol": "-",
+        "calories": "10"
+    },
+    {
+        "id": 72,
+        "name": "Zeytin(Siyah)",
+        "weight": "gr",
+        "protein": "1,8",
+        "suger": "1,1",
+        "fat": "21",
+        "cholesterol": "-",
+        "calories": "207"
+    },
+    {
+        "id": 73,
+        "name": "Zeytin(Yeşil)",
+        "weight": "gr",
+        "protein": "1,5",
+        "suger": "2,8",
+        "fat": "13,5",
+        "cholesterol": "-",
+        "calories": "144"
+    },
+    {
+        "id": 74,
+        "name": "Ekmek(buğday)",
+        "weight": "gr",
+        "protein": "9,1",
+        "suger": "56,4",
+        "fat": "0,8",
+        "cholesterol": "-",
+        "calories": "276"
+    },
+    {
+        "id": 75,
+        "name": "Ekmek(çavdar)",
+        "weight": "gr",
+        "protein": "9,1",
+        "suger": "52,1",
+        "fat": "1,1",
+        "cholesterol": "-",
+        "calories": "243"
+    },
+    {
+        "id": 76,
+        "name": "GaletaUnu",
+        "weight": "gr",
+        "protein": "12,6",
+        "suger": "73,4",
+        "fat": "4,6",
+        "cholesterol": "-",
+        "calories": "392"
+    },
+    {
+        "id": 77,
+        "name": "Grissini",
+        "weight": "gr",
+        "protein": "12,3",
+        "suger": "-",
+        "fat": "13,9",
+        "cholesterol": "-",
+        "calories": "433"
+    },
+    {
+        "id": 78,
+        "name": "İrmik",
+        "weight": "gr",
+        "protein": "11,4",
+        "suger": "77",
+        "fat": "0,9",
+        "cholesterol": "-",
+        "calories": "371"
+    },
+    {
+        "id": 79,
+        "name": "Kraker(Peynirli)",
+        "weight": "gr",
+        "protein": "11,2",
+        "suger": "60,4",
+        "fat": "21,3",
+        "cholesterol": "-",
+        "calories": "479"
+    },
+    {
+        "id": 80,
+        "name": "Kraker(Sade)",
+        "weight": "gr",
+        "protein": "8",
+        "suger": "73,3",
+        "fat": "9,4",
+        "cholesterol": "-",
+        "calories": "384"
+    },
+    {
+        "id": 81,
+        "name": "Kraker(tuzlu)",
+        "weight": "gr",
+        "protein": "9,8",
+        "suger": "71,5",
+        "fat": "12",
+        "cholesterol": "-",
+        "calories": "433"
+    },
+    {
+        "id": 82,
+        "name": "Makarna",
+        "weight": "gr",
+        "protein": "12,5",
+        "suger": "75,2",
+        "fat": "1,2",
+        "cholesterol": "-",
+        "calories": "369"
+    },
+    {
+        "id": 83,
+        "name": "Sandviçekmeği",
+        "weight": "gr",
+        "protein": "8,2",
+        "suger": "53",
+        "fat": "5,6",
+        "cholesterol": "-",
+        "calories": "298"
+    },
+    {
+        "id": 84,
+        "name": "Yufka",
+        "weight": "gr",
+        "protein": "8,9",
+        "suger": "63,9",
+        "fat": "0,5",
+        "cholesterol": "-",
+        "calories": "271"
+    },
+    {
+        "id": 85,
+        "name": "Yufka(Böreklik)",
+        "weight": "gr",
+        "protein": "3,1",
+        "suger": "33",
+        "fat": "0,3",
+        "cholesterol": "-",
+        "calories": "152"
+    },
+    {
+        "id": 86,
+        "name": "Jambon",
+        "weight": "gr",
+        "protein": "17,6",
+        "suger": "3,1",
+        "fat": "10,6",
+        "cholesterol": "-",
+        "calories": "182"
+    },
+    {
+        "id": 87,
+        "name": "Kavurma",
+        "weight": "gr",
+        "protein": "20",
+        "suger": "0,2",
+        "fat": "65,5",
+        "cholesterol": "-",
+        "calories": "670"
+    },
+    {
+        "id": 88,
+        "name": "Pastırma(çemenli)",
+        "weight": "gr",
+        "protein": "29,5",
+        "suger": "-",
+        "fat": "13,9",
+        "cholesterol": "-",
+        "calories": "250"
+    },
+    {
+        "id": 89,
+        "name": "Pastırma(çemensiz)",
+        "weight": "gr",
+        "protein": "32,7",
+        "suger": "-",
+        "fat": "14,9",
+        "cholesterol": "-",
+        "calories": "269"
+    },
+    {
+        "id": 90,
+        "name": "Salam",
+        "weight": "gr",
+        "protein": "23,8",
+        "suger": "1,2",
+        "fat": "38,1",
+        "cholesterol": "60",
+        "calories": "450"
+    },
+    {
+        "id": 91,
+        "name": "Sosis",
+        "weight": "gr",
+        "protein": "11,3",
+        "suger": "2,4",
+        "fat": "29,4",
+        "cholesterol": "56",
+        "calories": "322"
+    },
+    {
+        "id": 92,
+        "name": "Sucuk",
+        "weight": "gr",
+        "protein": "21,4",
+        "suger": "-",
+        "fat": "40,8",
+        "cholesterol": "-",
+        "calories": "452"
+    },
+    {
+        "id": 93,
+        "name": "BalıkYağı",
+        "weight": "gr",
+        "protein": "0",
+        "suger": "0",
+        "fat": "100",
+        "cholesterol": "-",
+        "calories": "900"
+    },
+    {
+        "id": 94,
+        "name": "İçyağı",
+        "weight": "gr",
+        "protein": "4,1",
+        "suger": "-",
+        "fat": "81,8",
+        "cholesterol": "-",
+        "calories": "758"
+    },
+    {
+        "id": 95,
+        "name": "KuyrukYağı",
+        "weight": "gr",
+        "protein": "0",
+        "suger": "0",
+        "fat": "100",
+        "cholesterol": "109",
+        "calories": "902"
+    },
+    {
+        "id": 96,
+        "name": "SadeYağ(erimiş)",
+        "weight": "gr",
+        "protein": "0,3",
+        "suger": "0",
+        "fat": "98,7",
+        "cholesterol": "-",
+        "calories": "890"
+    },
+    {
+        "id": 97,
+        "name": "Adaçayı",
+        "weight": "gr",
+        "protein": "10,6",
+        "suger": "60,7",
+        "fat": "12,7",
+        "cholesterol": "0",
+        "calories": "315"
+    },
+    {
+        "id": 98,
+        "name": "Cin",
+        "weight": "gr",
+        "protein": "0",
+        "suger": "0",
+        "fat": "0",
+        "cholesterol": "0",
+        "calories": "231"
+    },
+    {
+        "id": 99,
+        "name": "Domatessuyu",
+        "weight": "gr",
+        "protein": "0,7",
+        "suger": "3,4",
+        "fat": "0",
+        "cholesterol": "0",
+        "calories": "16"
+    },
+    {
+        "id": 100,
+        "name": "Gazoz",
+        "weight": "gr",
+        "protein": "0",
+        "suger": "10",
+        "fat": "0",
+        "cholesterol": "0",
+        "calories": "39"
+    },
+    {
+        "id": 101,
+        "name": "Ihlamur",
+        "weight": "gr",
+        "protein": "0,4",
+        "suger": "6,7",
+        "fat": "1,4",
+        "cholesterol": "0",
+        "calories": "42"
+    },
+    {
+        "id": 102,
+        "name": "Limonata",
+        "weight": "gr",
+        "protein": "0",
+        "suger": "5,6",
+        "fat": "0",
+        "cholesterol": "0",
+        "calories": "21"
+    },
+    {
+        "id": 103,
+        "name": "Meyvesuyu",
+        "weight": "gr",
+        "protein": "0",
+        "suger": "8",
+        "fat": "0",
+        "cholesterol": "0",
+        "calories": "31"
+    },
+    {
+        "id": 104,
+        "name": "PortakalSuyu",
+        "weight": "gr",
+        "protein": "0,7",
+        "suger": "10,4",
+        "fat": "0,2",
+        "cholesterol": "-",
+        "calories": "45"
+    },
+    {
+        "id": 105,
+        "name": "Rose(şarap)",
+        "weight": "gr",
+        "protein": "0,1",
+        "suger": "2,5",
+        "fat": "0",
+        "cholesterol": "0",
+        "calories": "71"
+    },
+    {
+        "id": 106,
+        "name": "Viski",
+        "weight": "gr",
+        "protein": "0",
+        "suger": "0",
+        "fat": "0",
+        "cholesterol": "0",
+        "calories": "263"
+    },
+    {
+        "id": 107,
+        "name": "Votka",
+        "weight": "gr",
+        "protein": "0",
+        "suger": "0",
+        "fat": "0",
+        "cholesterol": "0",
+        "calories": "275"
+    },
+    {
+        "id": 108,
+        "name": "Azyağlıdanaeti",
+        "weight": "gr",
+        "protein": "19,7",
+        "suger": "0",
+        "fat": "8",
+        "cholesterol": "70",
+        "calories": "156"
+    },
+    {
+        "id": 109,
+        "name": "Azyağlıdomuzeti",
+        "weight": "gr",
+        "protein": "11,2",
+        "suger": "0",
+        "fat": "47",
+        "cholesterol": "170",
+        "calories": "472"
+    },
+    {
+        "id": 110,
+        "name": "Azyağlıkoyuneti",
+        "weight": "gr",
+        "protein": "16,8",
+        "suger": "0",
+        "fat": "19,4",
+        "cholesterol": "140",
+        "calories": "247"
+    },
+    {
+        "id": 111,
+        "name": "Azyağlısığıreti",
+        "weight": "gr",
+        "protein": "19,4",
+        "suger": "0",
+        "fat": "15,8",
+        "cholesterol": "60",
+        "calories": "225"
+    },
+    {
+        "id": 112,
+        "name": "Keçieti",
+        "weight": "gr",
+        "protein": "16",
+        "suger": "0",
+        "fat": "9",
+        "cholesterol": "-",
+        "calories": "145"
+    },
+    {
+        "id": 113,
+        "name": "Ortayağlıdanaeti",
+        "weight": "gr",
+        "protein": "19,1",
+        "suger": "0",
+        "fat": "12",
+        "cholesterol": "90",
+        "calories": "190"
+    },
+    {
+        "id": 114,
+        "name": "Ortayağlıdomuzeti",
+        "weight": "gr",
+        "protein": "10,2",
+        "suger": "0",
+        "fat": "52",
+        "cholesterol": "190",
+        "calories": "513"
+    },
+    {
+        "id": 115,
+        "name": "Ortayağlıkoyuneti",
+        "weight": "gr",
+        "protein": "16,5",
+        "suger": "0",
+        "fat": "21,3",
+        "cholesterol": "150",
+        "calories": "263"
+    },
+    {
+        "id": 116,
+        "name": "Ortayağlısığıreti",
+        "weight": "gr",
+        "protein": "18,5",
+        "suger": "0",
+        "fat": "20,4",
+        "cholesterol": "70",
+        "calories": "263"
+    },
+    {
+        "id": 117,
+        "name": "Yağlıdanaeti",
+        "weight": "gr",
+        "protein": "18,5",
+        "suger": "0",
+        "fat": "16",
+        "cholesterol": "110",
+        "calories": "223"
+    },
+    {
+        "id": 118,
+        "name": "Yağlıdomuzeti",
+        "weight": "gr",
+        "protein": "9,1",
+        "suger": "0",
+        "fat": "57",
+        "cholesterol": "210",
+        "calories": "553"
+    },
+    {
+        "id": 119,
+        "name": "Yağlıkoyuneti",
+        "weight": "gr",
+        "protein": "15,4",
+        "suger": "0",
+        "fat": "27,1",
+        "cholesterol": "160",
+        "calories": "310"
+    },
+    {
+        "id": 120,
+        "name": "Yağlısığıreti",
+        "weight": "gr",
+        "protein": "17,4",
+        "suger": "0",
+        "fat": "25",
+        "cholesterol": "80",
+        "calories": "301"
+    },
+    {
+        "id": 121,
+        "name": "Ayçekirdeği",
+        "weight": "gr",
+        "protein": "24",
+        "suger": "19,9",
+        "fat": "47,3",
+        "cholesterol": "-",
+        "calories": "560"
+    },
+    {
+        "id": 122,
+        "name": "Badem",
+        "weight": "gr",
+        "protein": "18,6",
+        "suger": "19",
+        "fat": "54,2",
+        "cholesterol": "-",
+        "calories": "598"
+    },
+    {
+        "id": 123,
+        "name": "Bakla(İç)",
+        "weight": "gr",
+        "protein": "25,1",
+        "suger": "58,2",
+        "fat": "1,7",
+        "cholesterol": "-",
+        "calories": "338"
+    },
+    {
+        "id": 124,
+        "name": "Barbunya",
+        "weight": "gr",
+        "protein": "22,9",
+        "suger": "63",
+        "fat": "1,2",
+        "cholesterol": "-",
+        "calories": "349"
+    },
+    {
+        "id": 125,
+        "name": "Bezelye",
+        "weight": "gr",
+        "protein": "24,2",
+        "suger": "63",
+        "fat": "1",
+        "cholesterol": "-",
+        "calories": "348"
+    },
+    {
+        "id": 126,
+        "name": "Börülce",
+        "weight": "gr",
+        "protein": "22,8",
+        "suger": "61,7",
+        "fat": "1,5",
+        "cholesterol": "-",
+        "calories": "343"
+    },
+    {
+        "id": 127,
+        "name": "Ceviz",
+        "weight": "gr",
+        "protein": "14,8",
+        "suger": "15,8",
+        "fat": "64",
+        "cholesterol": "-",
+        "calories": "651"
+    },
+    {
+        "id": 128,
+        "name": "ÇamFıstığı",
+        "weight": "gr",
+        "protein": "13",
+        "suger": "20,5",
+        "fat": "60,5",
+        "cholesterol": "-",
+        "calories": "635"
+    },
+    {
+        "id": 129,
+        "name": "Fındık",
+        "weight": "gr",
+        "protein": "12",
+        "suger": "16",
+        "fat": "62,4",
+        "cholesterol": "-",
+        "calories": "634"
+    },
+    {
+        "id": 130,
+        "name": "Fıstık",
+        "weight": "gr",
+        "protein": "-",
+        "suger": "-",
+        "fat": "-",
+        "cholesterol": "-",
+        "calories": "560"
+    },
+    {
+        "id": 131,
+        "name": "KuruFasulye(beyaz)",
+        "weight": "gr",
+        "protein": "22,3",
+        "suger": "61,3",
+        "fat": "1,6",
+        "cholesterol": "-",
+        "calories": "340"
+    },
+    {
+        "id": 132,
+        "name": "KabakÇekirdeği",
+        "weight": "gr",
+        "protein": "30",
+        "suger": "16,7",
+        "fat": "50",
+        "cholesterol": "-",
+        "calories": "610"
+    },
+    {
+        "id": 133,
+        "name": "Kavun,KarpuzÇekirdeği",
+        "weight": "gr",
+        "protein": "25",
+        "suger": "19",
+        "fat": "45",
+        "cholesterol": "-",
+        "calories": "581"
+    },
+    {
+        "id": 134,
+        "name": "Kestane",
+        "weight": "gr",
+        "protein": "2,9",
+        "suger": "42,1",
+        "fat": "1,5",
+        "cholesterol": "-",
+        "calories": "194"
+    },
+    {
+        "id": 135,
+        "name": "KestaneHaşlanmış",
+        "weight": "gr",
+        "protein": "2",
+        "suger": "27,8",
+        "fat": "1,5",
+        "cholesterol": "-",
+        "calories": "131"
+    },
+    {
+        "id": 136,
+        "name": "KestaneKavrulmuş",
+        "weight": "gr",
+        "protein": "3,2",
+        "suger": "53",
+        "fat": "2,2",
+        "cholesterol": "-",
+        "calories": "245"
+    },
+    {
+        "id": 137,
+        "name": "Mercimek",
+        "weight": "gr",
+        "protein": "24,7",
+        "suger": "60,1",
+        "fat": "1,1",
+        "cholesterol": "-",
+        "calories": "340"
+    },
+    {
+        "id": 138,
+        "name": "Nohut",
+        "weight": "gr",
+        "protein": "20,5",
+        "suger": "61",
+        "fat": "4,8",
+        "cholesterol": "-",
+        "calories": "360"
+    },
+    {
+        "id": 139,
+        "name": "PalamutÇekirdeği",
+        "weight": "gr",
+        "protein": "3",
+        "suger": "57,8",
+        "fat": "2,6",
+        "cholesterol": "-",
+        "calories": "268"
+    },
+    {
+        "id": 140,
+        "name": "SoyaFasulyesi",
+        "weight": "gr",
+        "protein": "34,1",
+        "suger": "33,5",
+        "fat": "17,7",
+        "cholesterol": "-",
+        "calories": "403"
+    },
+    {
+        "id": 141,
+        "name": "SoyaUnu(azyağlı)",
+        "weight": "gr",
+        "protein": "43,4",
+        "suger": "36,6",
+        "fat": "6,7",
+        "cholesterol": "-",
+        "calories": "356"
+    },
+    {
+        "id": 142,
+        "name": "SoyaUnu(yağsız)",
+        "weight": "gr",
+        "protein": "47",
+        "suger": "38,1",
+        "fat": "0,9",
+        "cholesterol": "-",
+        "calories": "326"
+    },
+    {
+        "id": 143,
+        "name": "Susam",
+        "weight": "gr",
+        "protein": "18,2",
+        "suger": "17,6",
+        "fat": "53,4",
+        "cholesterol": "-",
+        "calories": "582"
+    },
+    {
+        "id": 144,
+        "name": "ŞamFıstığı",
+        "weight": "gr",
+        "protein": "19,3",
+        "suger": "19",
+        "fat": "53,7",
+        "cholesterol": "-",
+        "calories": "594"
+    },
+    {
+        "id": 145,
+        "name": "YerFıstığı",
+        "weight": "gr",
+        "protein": "26,2",
+        "suger": "20,6",
+        "fat": "48,7",
+        "cholesterol": "-",
+        "calories": "582"
+    },
+    {
+        "id": 146,
+        "name": "Hindi,etvederi",
+        "weight": "gr",
+        "protein": "20,4",
+        "suger": "0",
+        "fat": "8",
+        "cholesterol": "68",
+        "calories": "160"
+    },
+    {
+        "id": 147,
+        "name": "Kaz",
+        "weight": "gr",
+        "protein": "15,9",
+        "suger": "0",
+        "fat": "33,6",
+        "cholesterol": "80",
+        "calories": "371"
+    },
+    {
+        "id": 148,
+        "name": "Ördek",
+        "weight": "gr",
+        "protein": "11,5",
+        "suger": "0",
+        "fat": "39,3",
+        "cholesterol": "76",
+        "calories": "404"
+    },
+    {
+        "id": 149,
+        "name": "Tavukbütün",
+        "weight": "gr",
+        "protein": "18,6",
+        "suger": "0",
+        "fat": "15,1",
+        "cholesterol": "75",
+        "calories": "215"
+    },
+    {
+        "id": 150,
+        "name": "Tavukbeyazet(derili)",
+        "weight": "gr",
+        "protein": "20,3",
+        "suger": "0",
+        "fat": "11,1",
+        "cholesterol": "80",
+        "calories": "186"
+    },
+    {
+        "id": 151,
+        "name": "Tavukbeyazet(derisiz)",
+        "weight": "gr",
+        "protein": "23,2",
+        "suger": "0",
+        "fat": "1,7",
+        "cholesterol": "80",
+        "calories": "114"
+    },
+    {
+        "id": 152,
+        "name": "Tavuksiyahetderisiz",
+        "weight": "gr",
+        "protein": "20,1",
+        "suger": "0",
+        "fat": "4,3",
+        "cholesterol": "58",
+        "calories": "125"
+    },
+    {
+        "id": 153,
+        "name": "Tavuk,deri",
+        "weight": "gr",
+        "protein": "13,3",
+        "suger": "0",
+        "fat": "32,4",
+        "cholesterol": "80",
+        "calories": "349"
+    },
+    {
+        "id": 154,
+        "name": "Tavuk,siyahet(derili)",
+        "weight": "gr",
+        "protein": "16,7",
+        "suger": "0",
+        "fat": "18,3",
+        "cholesterol": "75",
+        "calories": "237"
+    },
+    {
+        "id": 155,
+        "name": "Ahududu(Kırmızı)",
+        "weight": "gr",
+        "protein": "1,2",
+        "suger": "13,6",
+        "fat": "0,5",
+        "cholesterol": "-",
+        "calories": "57"
+    },
+    {
+        "id": 156,
+        "name": "Ahududu(Siyah)",
+        "weight": "gr",
+        "protein": "1,5",
+        "suger": "15,7",
+        "fat": "1,4",
+        "cholesterol": "-",
+        "calories": "73"
+    },
+    {
+        "id": 157,
+        "name": "Ananas",
+        "weight": "gr",
+        "protein": "0,4",
+        "suger": "13,6",
+        "fat": "0,2",
+        "cholesterol": "-",
+        "calories": "52"
+    },
+    {
+        "id": 158,
+        "name": "Armut",
+        "weight": "gr",
+        "protein": "0,7",
+        "suger": "15,3",
+        "fat": "0,4",
+        "cholesterol": "-",
+        "calories": "61"
+    },
+    {
+        "id": 159,
+        "name": "Avokado",
+        "weight": "gr",
+        "protein": "2,1",
+        "suger": "6,3",
+        "fat": "16,4",
+        "cholesterol": "-",
+        "calories": "167"
+    },
+    {
+        "id": 160,
+        "name": "Ayva",
+        "weight": "gr",
+        "protein": "0,4",
+        "suger": "15,3",
+        "fat": "0,1",
+        "cholesterol": "-",
+        "calories": "57"
+    },
+    {
+        "id": 161,
+        "name": "Böğürtlen",
+        "weight": "gr",
+        "protein": "1,2",
+        "suger": "12,9",
+        "fat": "0,9",
+        "cholesterol": "-",
+        "calories": "58"
+    },
+    {
+        "id": 162,
+        "name": "Çilek",
+        "weight": "gr",
+        "protein": "0,7",
+        "suger": "8,4",
+        "fat": "0,5",
+        "cholesterol": "-",
+        "calories": "37"
+    },
+    {
+        "id": 163,
+        "name": "Dut",
+        "weight": "gr",
+        "protein": "0,9",
+        "suger": "19,8",
+        "fat": "1,1",
+        "cholesterol": "-",
+        "calories": "93"
+    },
+    {
+        "id": 164,
+        "name": "Elma",
+        "weight": "gr",
+        "protein": "0,2",
+        "suger": "14,5",
+        "fat": "0,6",
+        "cholesterol": "-",
+        "calories": "58"
+    },
+    {
+        "id": 165,
+        "name": "ElmaSuyu",
+        "weight": "gr",
+        "protein": "0,1",
+        "suger": "12",
+        "fat": "-",
+        "cholesterol": "-",
+        "calories": "47"
+    },
+    {
+        "id": 166,
+        "name": "Erik(Kırmızı)",
+        "weight": "gr",
+        "protein": "0,5",
+        "suger": "17,8",
+        "fat": "-",
+        "cholesterol": "-",
+        "calories": "66"
+    },
+    {
+        "id": 167,
+        "name": "Erik(Mürdüm)",
+        "weight": "gr",
+        "protein": "0,8",
+        "suger": "19,7",
+        "fat": "0,2",
+        "cholesterol": "-",
+        "calories": "79"
+    },
+    {
+        "id": 168,
+        "name": "ErikMürdüm(Kuru)",
+        "weight": "gr",
+        "protein": "2,1",
+        "suger": "67,4",
+        "fat": "0,6",
+        "cholesterol": "-",
+        "calories": "255"
+    },
+    {
+        "id": 169,
+        "name": "ErikPestil",
+        "weight": "gr",
+        "protein": "3,3",
+        "suger": "91,3",
+        "fat": "0,5",
+        "cholesterol": "-",
+        "calories": "344"
+    },
+    {
+        "id": 170,
+        "name": "Greyfurt",
+        "weight": "gr",
+        "protein": "0,5",
+        "suger": "10,6",
+        "fat": "0,1",
+        "cholesterol": "-",
+        "calories": "41"
+    },
+    {
+        "id": 171,
+        "name": "GreyfurtSuyu",
+        "weight": "gr",
+        "protein": "0,5",
+        "suger": "9,2",
+        "fat": "0,1",
+        "cholesterol": "-",
+        "calories": "39"
+    },
+    {
+        "id": 172,
+        "name": "Hurma",
+        "weight": "gr",
+        "protein": "2,2",
+        "suger": "72,9",
+        "fat": "0,5",
+        "cholesterol": "-",
+        "calories": "274"
+    },
+    {
+        "id": 173,
+        "name": "İncir(Kuru)",
+        "weight": "gr",
+        "protein": "4,3",
+        "suger": "69,1",
+        "fat": "1,3",
+        "cholesterol": "-",
+        "calories": "274"
+    },
+    {
+        "id": 174,
+        "name": "İncir(Taze)",
+        "weight": "gr",
+        "protein": "1,2",
+        "suger": "20,4",
+        "fat": "0,4",
+        "cholesterol": "-",
+        "calories": "80"
+    },
+    {
+        "id": 175,
+        "name": "Karpuz",
+        "weight": "gr",
+        "protein": "0,5",
+        "suger": "6,4",
+        "fat": "0,2",
+        "cholesterol": "-",
+        "calories": "26"
+    },
+    {
+        "id": 176,
+        "name": "Kavun",
+        "weight": "gr",
+        "protein": "0,8",
+        "suger": "7,7",
+        "fat": "0,3",
+        "cholesterol": "-",
+        "calories": "33"
+    },
+    {
+        "id": 177,
+        "name": "Kayısı(Kuru)",
+        "weight": "gr",
+        "protein": "5",
+        "suger": "66,5",
+        "fat": "0,5",
+        "cholesterol": "-",
+        "calories": "260"
+    },
+    {
+        "id": 178,
+        "name": "KayısıPestil",
+        "weight": "gr",
+        "protein": "5,6",
+        "suger": "84,6",
+        "fat": "1",
+        "cholesterol": "-",
+        "calories": "332"
+    },
+    {
+        "id": 179,
+        "name": "Kivi",
+        "weight": "gr",
+        "protein": "0,3",
+        "suger": "10",
+        "fat": "0,1",
+        "cholesterol": "-",
+        "calories": "30"
+    },
+    {
+        "id": 180,
+        "name": "Limon",
+        "weight": "gr",
+        "protein": "1,1",
+        "suger": "8,2",
+        "fat": "0,3",
+        "cholesterol": "-",
+        "calories": "27"
+    },
+    {
+        "id": 181,
+        "name": "LimonSuyu",
+        "weight": "gr",
+        "protein": "0,5",
+        "suger": "8",
+        "fat": "0,2",
+        "cholesterol": "-",
+        "calories": "25"
+    },
+    {
+        "id": 182,
+        "name": "Mandalina",
+        "weight": "gr",
+        "protein": "0,8",
+        "suger": "11,6",
+        "fat": "0,2",
+        "cholesterol": "-",
+        "calories": "46"
+    },
+    {
+        "id": 183,
+        "name": "MandalinaSuyu",
+        "weight": "gr",
+        "protein": "0,5",
+        "suger": "10",
+        "fat": "0,2",
+        "cholesterol": "-",
+        "calories": "43"
+    },
+    {
+        "id": 184,
+        "name": "Muz",
+        "weight": "gr",
+        "protein": "1",
+        "suger": "27",
+        "fat": "1",
+        "cholesterol": "0",
+        "calories": "105"
+    },
+    {
+        "id": 185,
+        "name": "Nar",
+        "weight": "gr",
+        "protein": "0,5",
+        "suger": "16",
+        "fat": "0,3",
+        "cholesterol": "-",
+        "calories": "63"
+    },
+    {
+        "id": 186,
+        "name": "Portakal",
+        "weight": "gr",
+        "protein": "1",
+        "suger": "12,2",
+        "fat": "0,2",
+        "cholesterol": "-",
+        "calories": "49"
+    },
+    {
+        "id": 187,
+        "name": "Şeftali",
+        "weight": "gr",
+        "protein": "0,6",
+        "suger": "9,7",
+        "fat": "0,1",
+        "cholesterol": "-",
+        "calories": "38"
+    },
+    {
+        "id": 188,
+        "name": "Üzüm(Kuru)",
+        "weight": "gr",
+        "protein": "2,5",
+        "suger": "77,4",
+        "fat": "0,2",
+        "cholesterol": "-",
+        "calories": "289"
+    },
+    {
+        "id": 189,
+        "name": "Üzüm(Taze)",
+        "weight": "gr",
+        "protein": "0,6",
+        "suger": "17,3",
+        "fat": "0,3",
+        "cholesterol": "-",
+        "calories": "67"
+    },
+    {
+        "id": 190,
+        "name": "ÜzümSuyu",
+        "weight": "gr",
+        "protein": "0,2",
+        "suger": "16,6",
+        "fat": "-",
+        "cholesterol": "-",
+        "calories": "66"
+    },
+    {
+        "id": 191,
+        "name": "Vişne",
+        "weight": "gr",
+        "protein": "1,2",
+        "suger": "14,3",
+        "fat": "0,3",
+        "cholesterol": "-",
+        "calories": "58"
+    },
+    {
+        "id": 192,
+        "name": "Bey.peynir(Edirne)",
+        "weight": "gr",
+        "protein": "15,4",
+        "suger": "0,8",
+        "fat": "18,2",
+        "cholesterol": "-",
+        "calories": "235"
+    },
+    {
+        "id": 193,
+        "name": "Bey.peynir(Urfa)",
+        "weight": "gr",
+        "protein": "15,2",
+        "suger": "0,2",
+        "fat": "26,5",
+        "cholesterol": "-",
+        "calories": "312"
+    },
+    {
+        "id": 194,
+        "name": "Bey.peynir(yağlı)",
+        "weight": "gr",
+        "protein": "22,5",
+        "suger": "0",
+        "fat": "21,6",
+        "cholesterol": "-",
+        "calories": "289"
+    },
+    {
+        "id": 195,
+        "name": "Bey.peynir(yağsız)",
+        "weight": "gr",
+        "protein": "19",
+        "suger": "3,8",
+        "fat": "0,7",
+        "cholesterol": "-",
+        "calories": "99"
+    },
+    {
+        "id": 196,
+        "name": "Cheddar",
+        "weight": "gr",
+        "protein": "24,9",
+        "suger": "1,3",
+        "fat": "33,1",
+        "cholesterol": "105",
+        "calories": "403"
+    },
+    {
+        "id": 197,
+        "name": "Çökelek(Kuru)",
+        "weight": "gr",
+        "protein": "54,9",
+        "suger": "13,8",
+        "fat": "11,7",
+        "cholesterol": "-",
+        "calories": "379"
+    },
+    {
+        "id": 198,
+        "name": "Çökelek(Taze)",
+        "weight": "gr",
+        "protein": "35",
+        "suger": "3,2",
+        "fat": "5,6",
+        "cholesterol": "-",
+        "calories": "215"
+    },
+    {
+        "id": 199,
+        "name": "Gravyer(%8Tuzlu)",
+        "weight": "gr",
+        "protein": "29,8",
+        "suger": "0,4",
+        "fat": "32,3",
+        "cholesterol": "110",
+        "calories": "413"
+    },
+    {
+        "id": 200,
+        "name": "KarsTipi",
+        "weight": "gr",
+        "protein": "25",
+        "suger": "1,4",
+        "fat": "27,8",
+        "cholesterol": "89",
+        "calories": "357"
+    },
+    {
+        "id": 201,
+        "name": "KaşarPeyniri",
+        "weight": "gr",
+        "protein": "27",
+        "suger": "1,4",
+        "fat": "31,7",
+        "cholesterol": "-",
+        "calories": "404"
+    },
+    {
+        "id": 202,
+        "name": "KremPeynir(Sade)",
+        "weight": "gr",
+        "protein": "7,6",
+        "suger": "2,7",
+        "fat": "34,9",
+        "cholesterol": "110",
+        "calories": "349"
+    },
+    {
+        "id": 203,
+        "name": "Lorpeyniri(%1yağ)",
+        "weight": "gr",
+        "protein": "12,4",
+        "suger": "2,7",
+        "fat": "1",
+        "cholesterol": "7",
+        "calories": "72"
+    },
+    {
+        "id": 204,
+        "name": "Lorpeyniri(%2yağ)",
+        "weight": "gr",
+        "protein": "13,7",
+        "suger": "3,6",
+        "fat": "1,9",
+        "cholesterol": "7",
+        "calories": "90"
+    },
+    {
+        "id": 205,
+        "name": "Lorpeyniri(yağsız)",
+        "weight": "gr",
+        "protein": "17,3",
+        "suger": "1,9",
+        "fat": "0,4",
+        "cholesterol": "7",
+        "calories": "85"
+    },
+    {
+        "id": 206,
+        "name": "OtluPeynir",
+        "weight": "gr",
+        "protein": "20,1",
+        "suger": "0,5",
+        "fat": "27,3",
+        "cholesterol": "-",
+        "calories": "327"
+    },
+    {
+        "id": 207,
+        "name": "Rokfor",
+        "weight": "gr",
+        "protein": "21,5",
+        "suger": "2",
+        "fat": "30,6",
+        "cholesterol": "90",
+        "calories": "369"
+    },
+    {
+        "id": 208,
+        "name": "Akciğer(dana)",
+        "weight": "gr",
+        "protein": "16,8",
+        "suger": "0",
+        "fat": "3,8",
+        "cholesterol": "-",
+        "calories": "106"
+    },
+    {
+        "id": 209,
+        "name": "Beyin",
+        "weight": "gr",
+        "protein": "10,4",
+        "suger": "0,8",
+        "fat": "8,6",
+        "cholesterol": "2000",
+        "calories": "125"
+    },
+    {
+        "id": 210,
+        "name": "Böbrek(kuzu)",
+        "weight": "gr",
+        "protein": "16,8",
+        "suger": "0,9",
+        "fat": "3,3",
+        "cholesterol": "375",
+        "calories": "105"
+    },
+    {
+        "id": 211,
+        "name": "Dalak(sığır,dana)",
+        "weight": "gr",
+        "protein": "18,1",
+        "suger": "0",
+        "fat": "3",
+        "cholesterol": "-",
+        "calories": "104"
+    },
+    {
+        "id": 212,
+        "name": "Dil(dana)",
+        "weight": "gr",
+        "protein": "18,5",
+        "suger": "0,9",
+        "fat": "5,3",
+        "cholesterol": "-",
+        "calories": "130"
+    },
+    {
+        "id": 213,
+        "name": "İşkembe(sığır)",
+        "weight": "gr",
+        "protein": "19,1",
+        "suger": "0",
+        "fat": "2",
+        "cholesterol": "-",
+        "calories": "100"
+    },
+    {
+        "id": 214,
+        "name": "Karaciğer(dana)",
+        "weight": "gr",
+        "protein": "19,2",
+        "suger": "4,1",
+        "fat": "4,7",
+        "cholesterol": "300",
+        "calories": "140"
+    },
+    {
+        "id": 215,
+        "name": "Karaciğer(tavuk)",
+        "weight": "gr",
+        "protein": "19,7",
+        "suger": "2,9",
+        "fat": "3,7",
+        "cholesterol": "-",
+        "calories": "129"
+    },
+    {
+        "id": 216,
+        "name": "Yürek(dana)",
+        "weight": "gr",
+        "protein": "15",
+        "suger": "1,8",
+        "fat": "5,9",
+        "cholesterol": "150",
+        "calories": "124"
+    },
+    {
+        "id": 217,
+        "name": "AsmaYaprağı",
+        "weight": "gr",
+        "protein": "3,8",
+        "suger": "15,6",
+        "fat": "1,1",
+        "cholesterol": "-",
+        "calories": "97"
+    },
+    {
+        "id": 218,
+        "name": "Bamya(Kurutulmuş)",
+        "weight": "gr",
+        "protein": "17,4",
+        "suger": "56,1",
+        "fat": "2,2",
+        "cholesterol": "-",
+        "calories": "266"
+    },
+    {
+        "id": 219,
+        "name": "Bamya(taze)",
+        "weight": "gr",
+        "protein": "2,4",
+        "suger": "7,6",
+        "fat": "0,3",
+        "cholesterol": "-",
+        "calories": "36"
+    },
+    {
+        "id": 220,
+        "name": "Bezelye(İç)",
+        "weight": "gr",
+        "protein": "6,3",
+        "suger": "14,4",
+        "fat": "0,4",
+        "cholesterol": "-",
+        "calories": "84"
+    },
+    {
+        "id": 221,
+        "name": "Bezelye(Konserve)",
+        "weight": "gr",
+        "protein": "4,7",
+        "suger": "16,8",
+        "fat": "0,4",
+        "cholesterol": "-",
+        "calories": "88"
+    },
+    {
+        "id": 222,
+        "name": "Biber(Kurutulmuş)",
+        "weight": "gr",
+        "protein": "16",
+        "suger": "64",
+        "fat": "2,6",
+        "cholesterol": "-",
+        "calories": "293"
+    },
+    {
+        "id": 223,
+        "name": "Biber(Taze)",
+        "weight": "gr",
+        "protein": "1,2",
+        "suger": "4,8",
+        "fat": "0,2",
+        "cholesterol": "-",
+        "calories": "22"
+    },
+    {
+        "id": 224,
+        "name": "Börülce(Taze)",
+        "weight": "gr",
+        "protein": "9",
+        "suger": "21,8",
+        "fat": "0,8",
+        "cholesterol": "0",
+        "calories": "127"
+    },
+    {
+        "id": 225,
+        "name": "Domates(Kırmızı)",
+        "weight": "gr",
+        "protein": "1",
+        "suger": "5",
+        "fat": "0,2",
+        "cholesterol": "-",
+        "calories": "25"
+    },
+    {
+        "id": 226,
+        "name": "Domates(Yeşil)",
+        "weight": "gr",
+        "protein": "1,2",
+        "suger": "5,1",
+        "fat": "0,2",
+        "cholesterol": "-",
+        "calories": "24"
+    },
+    {
+        "id": 227,
+        "name": "Domatessuyu",
+        "weight": "gr",
+        "protein": "0,8",
+        "suger": "4,3",
+        "fat": "0,1",
+        "cholesterol": "-",
+        "calories": "19"
+    },
+    {
+        "id": 228,
+        "name": "Ebegümeci",
+        "weight": "gr",
+        "protein": "4,4",
+        "suger": "4,3",
+        "fat": "0,6",
+        "cholesterol": "-",
+        "calories": "47"
+    },
+    {
+        "id": 229,
+        "name": "Enginar",
+        "weight": "gr",
+        "protein": "3",
+        "suger": "7,8",
+        "fat": "0,2",
+        "cholesterol": "-",
+        "calories": "53"
+    },
+    {
+        "id": 230,
+        "name": "Fasulye(Kurutulmuş)",
+        "weight": "gr",
+        "protein": "8,6",
+        "suger": "61,1",
+        "fat": "1,7",
+        "cholesterol": "-",
+        "calories": "274"
+    },
+    {
+        "id": 231,
+        "name": "Fasulye(Taze)",
+        "weight": "gr",
+        "protein": "1,9",
+        "suger": "7,1",
+        "fat": "0,2",
+        "cholesterol": "-",
+        "calories": "32"
+    },
+    {
+        "id": 232,
+        "name": "Havuç",
+        "weight": "gr",
+        "protein": "1,1",
+        "suger": "9,7",
+        "fat": "0,2",
+        "cholesterol": "-",
+        "calories": "42"
+    },
+    {
+        "id": 233,
+        "name": "Hıyar(Soyulmamış)",
+        "weight": "gr",
+        "protein": "0,9",
+        "suger": "3,4",
+        "fat": "0,1",
+        "cholesterol": "-",
+        "calories": "15"
+    },
+    {
+        "id": 234,
+        "name": "Hıyar(soyulmuş)",
+        "weight": "gr",
+        "protein": "0,6",
+        "suger": "3,2",
+        "fat": "0,1",
+        "cholesterol": "-",
+        "calories": "14"
+    },
+    {
+        "id": 235,
+        "name": "HindibağOtu",
+        "weight": "gr",
+        "protein": "2,7",
+        "suger": "7,1",
+        "fat": "0,7",
+        "cholesterol": "-",
+        "calories": "53"
+    },
+    {
+        "id": 236,
+        "name": "Ispanak",
+        "weight": "gr",
+        "protein": "3,2",
+        "suger": "4,3",
+        "fat": "0,3",
+        "cholesterol": "-",
+        "calories": "26"
+    },
+    {
+        "id": 237,
+        "name": "Kabak(Kış)",
+        "weight": "gr",
+        "protein": "1",
+        "suger": "6,5",
+        "fat": "0,1",
+        "cholesterol": "-",
+        "calories": "26"
+    },
+    {
+        "id": 238,
+        "name": "Kabak(Yaz)",
+        "weight": "gr",
+        "protein": "11",
+        "suger": "4,2",
+        "fat": "0,1",
+        "cholesterol": "-",
+        "calories": "19"
+    },
+    {
+        "id": 239,
+        "name": "Karnıbahar",
+        "weight": "gr",
+        "protein": "2,7",
+        "suger": "5,2",
+        "fat": "0,2",
+        "cholesterol": "-",
+        "calories": "27"
+    },
+    {
+        "id": 240,
+        "name": "Kereviz",
+        "weight": "gr",
+        "protein": "1,8",
+        "suger": "8,5",
+        "fat": "0,3",
+        "cholesterol": "-",
+        "calories": "40"
+    },
+    {
+        "id": 241,
+        "name": "KırmızıBiber(Taze)",
+        "weight": "gr",
+        "protein": "3,7",
+        "suger": "18,1",
+        "fat": "2,3",
+        "cholesterol": "-",
+        "calories": "93"
+    },
+    {
+        "id": 242,
+        "name": "Kıvırcık",
+        "weight": "gr",
+        "protein": "1,7",
+        "suger": "4,1",
+        "fat": "0,1",
+        "cholesterol": "-",
+        "calories": "20"
+    },
+    {
+        "id": 243,
+        "name": "Konservefasulye",
+        "weight": "gr",
+        "protein": "1,4",
+        "suger": "5,2",
+        "fat": "0,2",
+        "cholesterol": "-",
+        "calories": "24"
+    },
+    {
+        "id": 244,
+        "name": "Kuşkonmaz",
+        "weight": "gr",
+        "protein": "2,5",
+        "suger": "5",
+        "fat": "0,2",
+        "cholesterol": "-",
+        "calories": "26"
+    },
+    {
+        "id": 245,
+        "name": "Lahana(Beyaz)",
+        "weight": "gr",
+        "protein": "1,3",
+        "suger": "5,4",
+        "fat": "0,2",
+        "cholesterol": "-",
+        "calories": "24"
+    },
+    {
+        "id": 246,
+        "name": "Lahana(Brüksel)",
+        "weight": "gr",
+        "protein": "5,2",
+        "suger": "8",
+        "fat": "0,3",
+        "cholesterol": "-",
+        "calories": "63"
+    },
+    {
+        "id": 247,
+        "name": "Lahana(Kara)",
+        "weight": "gr",
+        "protein": "4",
+        "suger": "5",
+        "fat": "0,3",
+        "cholesterol": "-",
+        "calories": "45"
+    },
+    {
+        "id": 248,
+        "name": "Lahana(Kırmızı)",
+        "weight": "gr",
+        "protein": "2",
+        "suger": "6,9",
+        "fat": "0,2",
+        "cholesterol": "-",
+        "calories": "31"
+    },
+    {
+        "id": 249,
+        "name": "Madımak",
+        "weight": "gr",
+        "protein": "2,4",
+        "suger": "-",
+        "fat": "0,3",
+        "cholesterol": "-",
+        "calories": "22"
+    },
+    {
+        "id": 250,
+        "name": "Mantar",
+        "weight": "gr",
+        "protein": "2,7",
+        "suger": "4,4",
+        "fat": "0,3",
+        "cholesterol": "-",
+        "calories": "28"
+    },
+    {
+        "id": 251,
+        "name": "Marul",
+        "weight": "gr",
+        "protein": "1,2",
+        "suger": "2,5",
+        "fat": "0,2",
+        "cholesterol": "-",
+        "calories": "14"
+    },
+    {
+        "id": 252,
+        "name": "Maydonoz",
+        "weight": "gr",
+        "protein": "3,6",
+        "suger": "8,5",
+        "fat": "0,6",
+        "cholesterol": "-",
+        "calories": "44"
+    },
+    {
+        "id": 253,
+        "name": "Mısır(Taze)",
+        "weight": "gr",
+        "protein": "3,5",
+        "suger": "22,1",
+        "fat": "1",
+        "cholesterol": "-",
+        "calories": "96"
+    },
+    {
+        "id": 254,
+        "name": "Nane(Taze)",
+        "weight": "gr",
+        "protein": "4",
+        "suger": "7,9",
+        "fat": "1,3",
+        "cholesterol": "-",
+        "calories": "65"
+    },
+    {
+        "id": 255,
+        "name": "Pancar(Kırmızı)",
+        "weight": "gr",
+        "protein": "1,6",
+        "suger": "9,9",
+        "fat": "0,1",
+        "cholesterol": "-",
+        "calories": "43"
+    },
+    {
+        "id": 256,
+        "name": "Pancar(Yaprak)",
+        "weight": "gr",
+        "protein": "2,2",
+        "suger": "4,6",
+        "fat": "0,3",
+        "cholesterol": "-",
+        "calories": "24"
+    },
+    {
+        "id": 257,
+        "name": "Patates",
+        "weight": "gr",
+        "protein": "2,1",
+        "suger": "17,1",
+        "fat": "0,1",
+        "cholesterol": "-",
+        "calories": "76"
+    },
+    {
+        "id": 258,
+        "name": "Patatesunu",
+        "weight": "gr",
+        "protein": "8",
+        "suger": "80",
+        "fat": "0,8",
+        "cholesterol": "-",
+        "calories": "351"
+    },
+    {
+        "id": 259,
+        "name": "Patlıcan(kurutul.)",
+        "weight": "gr",
+        "protein": "13,7",
+        "suger": "49",
+        "fat": "2,3",
+        "cholesterol": "-",
+        "calories": "286"
+    },
+    {
+        "id": 260,
+        "name": "Patlıcan(Taze)",
+        "weight": "gr",
+        "protein": "1,2",
+        "suger": "5,6",
+        "fat": "0,2",
+        "cholesterol": "-",
+        "calories": "25"
+    },
+    {
+        "id": 261,
+        "name": "Pazı",
+        "weight": "gr",
+        "protein": "2",
+        "suger": "4,2",
+        "fat": "0,3",
+        "cholesterol": "-",
+        "calories": "33"
+    },
+    {
+        "id": 262,
+        "name": "Pırasa",
+        "weight": "gr",
+        "protein": "2,2",
+        "suger": "11,2",
+        "fat": "0,3",
+        "cholesterol": "-",
+        "calories": "52"
+    },
+    {
+        "id": 263,
+        "name": "Roka",
+        "weight": "gr",
+        "protein": "3",
+        "suger": "3,2",
+        "fat": "0,6",
+        "cholesterol": "-",
+        "calories": "33"
+    },
+    {
+        "id": 264,
+        "name": "Sarmısak(Baş)",
+        "weight": "gr",
+        "protein": "6,2",
+        "suger": "30,8",
+        "fat": "0,2",
+        "cholesterol": "-",
+        "calories": "137"
+    },
+    {
+        "id": 265,
+        "name": "Sarmısak(Toz)",
+        "weight": "gr",
+        "protein": "16,8",
+        "suger": "72,7",
+        "fat": "0,8",
+        "cholesterol": "-",
+        "calories": "332"
+    },
+    {
+        "id": 266,
+        "name": "SemizOtu",
+        "weight": "gr",
+        "protein": "2",
+        "suger": "3,8",
+        "fat": "0,4",
+        "cholesterol": "-",
+        "calories": "32"
+    },
+    {
+        "id": 267,
+        "name": "Soğan(Kuru)",
+        "weight": "gr",
+        "protein": "1,5",
+        "suger": "8,7",
+        "fat": "0,1",
+        "cholesterol": "-",
+        "calories": "38"
+    },
+    {
+        "id": 268,
+        "name": "Soğan(Toz)",
+        "weight": "gr",
+        "protein": "10,1",
+        "suger": "80,7",
+        "fat": "1,1",
+        "cholesterol": "-",
+        "calories": "347"
+    },
+    {
+        "id": 269,
+        "name": "Soğan(Yeşil)",
+        "weight": "gr",
+        "protein": "1,5",
+        "suger": "8,2",
+        "fat": "0,2",
+        "cholesterol": "-",
+        "calories": "36"
+    },
+    {
+        "id": 270,
+        "name": "Şalgam",
+        "weight": "gr",
+        "protein": "1",
+        "suger": "6,6",
+        "fat": "0,2",
+        "cholesterol": "-",
+        "calories": "30"
+    },
+    {
+        "id": 271,
+        "name": "TazeBakla",
+        "weight": "gr",
+        "protein": "5,2",
+        "suger": "9,8",
+        "fat": "0,4",
+        "cholesterol": "-",
+        "calories": "72"
+    },
+    {
+        "id": 272,
+        "name": "Tere",
+        "weight": "gr",
+        "protein": "3",
+        "suger": "6",
+        "fat": "1",
+        "cholesterol": "-",
+        "calories": "33"
+    },
+    {
+        "id": 273,
+        "name": "Turp(Kırmızı)",
+        "weight": "gr",
+        "protein": "0,9",
+        "suger": "4,2",
+        "fat": "0,1",
+        "cholesterol": "-",
+        "calories": "19"
+    },
+    {
+        "id": 274,
+        "name": "Turp(Siyah)",
+        "weight": "gr",
+        "protein": "1",
+        "suger": "6,6",
+        "fat": "0,2",
+        "cholesterol": "-",
+        "calories": "30"
+    },
+    {
+        "id": 275,
+        "name": "YerElması",
+        "weight": "gr",
+        "protein": "2,3",
+        "suger": "16,7",
+        "fat": "0,1",
+        "cholesterol": "-",
+        "calories": "75"
+    },
+    {
+        "id": 276,
+        "name": "Yonca",
+        "weight": "gr",
+        "protein": "1",
+        "suger": "9",
+        "fat": "0,6",
+        "cholesterol": "-",
+        "calories": "49"
+    },
+    {
+        "id": 277,
+        "name": "BinAdaYağı",
+        "weight": "gr",
+        "protein": "0,9",
+        "suger": "15,2",
+        "fat": "35,7",
+        "cholesterol": "-",
+        "calories": "377"
+    },
+    {
+        "id": 278,
+        "name": "Fransızsalatasosu",
+        "weight": "gr",
+        "protein": "0,6",
+        "suger": "17,5",
+        "fat": "41",
+        "cholesterol": "-",
+        "calories": "430"
+    },
+    {
+        "id": 279,
+        "name": "İtalyansalatasosu",
+        "weight": "gr",
+        "protein": "0,7",
+        "suger": "10,2",
+        "fat": "48,3",
+        "cholesterol": "-",
+        "calories": "467"
+    },
+    {
+        "id": 280,
+        "name": "Ketçap",
+        "weight": "gr",
+        "protein": "2",
+        "suger": "25,4",
+        "fat": "0,4",
+        "cholesterol": "-",
+        "calories": "106"
+    },
+    {
+        "id": 281,
+        "name": "Krema(%50yağ,süt)",
+        "weight": "gr",
+        "protein": "3,2",
+        "suger": "4,6",
+        "fat": "11,7",
+        "cholesterol": "-",
+        "calories": "134"
+    },
+    {
+        "id": 282,
+        "name": "Mayonez",
+        "weight": "gr",
+        "protein": "0,9",
+        "suger": "23,9",
+        "fat": "33,4",
+        "cholesterol": "59",
+        "calories": "390"
+    },
+    {
+        "id": 283,
+        "name": "Salatasosu(yağlı)",
+        "weight": "gr",
+        "protein": "0",
+        "suger": "2,5",
+        "fat": "50,1",
+        "cholesterol": "-",
+        "calories": "449"
+    },
+    {
+        "id": 284,
+        "name": "Salça",
+        "weight": "gr",
+        "protein": "2,7",
+        "suger": "21,3",
+        "fat": "0,4",
+        "cholesterol": "-",
+        "calories": "98"
+    },
+    {
+        "id": 285,
+        "name": "SoyaSosu",
+        "weight": "gr",
+        "protein": "5,6",
+        "suger": "9,5",
+        "fat": "1,3",
+        "cholesterol": "-",
+        "calories": "68"
+    },
+    {
+        "id": 286,
+        "name": "Annesütü",
+        "weight": "gr",
+        "protein": "1",
+        "suger": "6,9",
+        "fat": "4,4",
+        "cholesterol": "14",
+        "calories": "70"
+    },
+    {
+        "id": 287,
+        "name": "İnek(1/2yağlı)",
+        "weight": "gr",
+        "protein": "3,3",
+        "suger": "4,8",
+        "fat": "1,9",
+        "cholesterol": "8",
+        "calories": "50"
+    },
+    {
+        "id": 288,
+        "name": "İnek(Yağlı)",
+        "weight": "gr",
+        "protein": "3,3",
+        "suger": "4,7",
+        "fat": "3,3",
+        "cholesterol": "14",
+        "calories": "61"
+    },
+    {
+        "id": 289,
+        "name": "İnek(yağsız)",
+        "weight": "gr",
+        "protein": "3,4",
+        "suger": "4,9",
+        "fat": "0,2",
+        "cholesterol": "2",
+        "calories": "35"
+    },
+    {
+        "id": 290,
+        "name": "Keçisütü",
+        "weight": "gr",
+        "protein": "3,6",
+        "suger": "4,5",
+        "fat": "4,1",
+        "cholesterol": "11",
+        "calories": "69"
+    },
+    {
+        "id": 291,
+        "name": "Koyun",
+        "weight": "gr",
+        "protein": "6",
+        "suger": "5,4",
+        "fat": "7",
+        "cholesterol": "-",
+        "calories": "108"
+    },
+    {
+        "id": 292,
+        "name": "Mandasütü",
+        "weight": "gr",
+        "protein": "3,8",
+        "suger": "5,2",
+        "fat": "6,9",
+        "cholesterol": "19",
+        "calories": "97"
+    },
+    {
+        "id": 293,
+        "name": "Soya",
+        "weight": "gr",
+        "protein": "3,4",
+        "suger": "2,2",
+        "fat": "1,5",
+        "cholesterol": "-",
+        "calories": "33"
+    },
+    {
+        "id": 294,
+        "name": "SütTozu(Yağlı)",
+        "weight": "gr",
+        "protein": "26,3",
+        "suger": "38,4",
+        "fat": "26,7",
+        "cholesterol": "97",
+        "calories": "496"
+    },
+    {
+        "id": 295,
+        "name": "SütTozu(Yağsız)",
+        "weight": "gr",
+        "protein": "36,2",
+        "suger": "52",
+        "fat": "0,8",
+        "cholesterol": "13",
+        "calories": "362"
+    },
+    {
+        "id": 296,
+        "name": "Yoğurt(1/2yağlı)",
+        "weight": "gr",
+        "protein": "3,4",
+        "suger": "5,2",
+        "fat": "1,7",
+        "cholesterol": "6",
+        "calories": "50"
+    },
+    {
+        "id": 297,
+        "name": "Yoğurt(Yağlı)",
+        "weight": "gr",
+        "protein": "3",
+        "suger": "4,9",
+        "fat": "3,4",
+        "cholesterol": "13",
+        "calories": "62"
+    },
+    {
+        "id": 298,
+        "name": "Akideşekeri",
+        "weight": "gr",
+        "protein": "0",
+        "suger": "86,9",
+        "fat": "0",
+        "cholesterol": "-",
+        "calories": "330"
+    },
+    {
+        "id": 299,
+        "name": "Bal",
+        "weight": "gr",
+        "protein": "0,3",
+        "suger": "78,4",
+        "fat": "0",
+        "cholesterol": "0,1",
+        "calories": "315"
+    },
+    {
+        "id": 300,
+        "name": "Bisküvi",
+        "weight": "gr",
+        "protein": "6,6",
+        "suger": "85,4",
+        "fat": "7,9",
+        "cholesterol": "-",
+        "calories": "418"
+    },
+    {
+        "id": 301,
+        "name": "Bisküvi(pasta)",
+        "weight": "gr",
+        "protein": "5,4",
+        "suger": "74,4",
+        "fat": "16,1",
+        "cholesterol": "-",
+        "calories": "462"
+    },
+    {
+        "id": 302,
+        "name": "Çikolata(Bademli)",
+        "weight": "gr",
+        "protein": "9,3",
+        "suger": "51,3",
+        "fat": "35,6",
+        "cholesterol": "0,7",
+        "calories": "532"
+    },
+    {
+        "id": 303,
+        "name": "Çikolata(Fıstıklı)",
+        "weight": "gr",
+        "protein": "14,1",
+        "suger": "44,6",
+        "fat": "38,1",
+        "cholesterol": "0,9",
+        "calories": "543"
+    },
+    {
+        "id": 304,
+        "name": "Çikolata(Şekerli)",
+        "weight": "gr",
+        "protein": "4,4",
+        "suger": "57,9",
+        "fat": "35,1",
+        "cholesterol": "0,5",
+        "calories": "528"
+    },
+    {
+        "id": 305,
+        "name": "Çikolata(Şekersiz)",
+        "weight": "gr",
+        "protein": "7,9",
+        "suger": "46,8",
+        "fat": "39,7",
+        "cholesterol": "1,8",
+        "calories": "477"
+    },
+    {
+        "id": 306,
+        "name": "Dondurma(Sütlü)",
+        "weight": "gr",
+        "protein": "4,5",
+        "suger": "20,8",
+        "fat": "10,6",
+        "cholesterol": "45",
+        "calories": "193"
+    },
+    {
+        "id": 307,
+        "name": "Karamela",
+        "weight": "gr",
+        "protein": "4",
+        "suger": "76,6",
+        "fat": "10,2",
+        "cholesterol": "0,2",
+        "calories": "399"
+    },
+    {
+        "id": 308,
+        "name": "Lokum",
+        "weight": "gr",
+        "protein": "-",
+        "suger": "57",
+        "fat": "1",
+        "cholesterol": "0",
+        "calories": "240"
+    },
+    {
+        "id": 309,
+        "name": "Marmelat",
+        "weight": "gr",
+        "protein": "0,5",
+        "suger": "70,8",
+        "fat": "0,3",
+        "cholesterol": "0",
+        "calories": "278"
+    },
+    {
+        "id": 310,
+        "name": "Meyvaşekerleme",
+        "weight": "gr",
+        "protein": "0,4",
+        "suger": "80,6",
+        "fat": "0,3",
+        "cholesterol": "0",
+        "calories": "316"
+    },
+    {
+        "id": 311,
+        "name": "Pekmez(Üzüm)",
+        "weight": "gr",
+        "protein": "0,6",
+        "suger": "70,6",
+        "fat": "0,1",
+        "cholesterol": "0",
+        "calories": "293"
+    },
+    {
+        "id": 312,
+        "name": "Reçel",
+        "weight": "gr",
+        "protein": "0,6",
+        "suger": "70",
+        "fat": "0,1",
+        "cholesterol": "0",
+        "calories": "272"
+    },
+    {
+        "id": 313,
+        "name": "Şeker",
+        "weight": "gr",
+        "protein": "0",
+        "suger": "99,5",
+        "fat": "0",
+        "cholesterol": "0",
+        "calories": "385"
+    },
+    {
+        "id": 314,
+        "name": "Tahinhelvası",
+        "weight": "gr",
+        "protein": "10,5",
+        "suger": "53,5",
+        "fat": "28",
+        "cholesterol": "0",
+        "calories": "516"
+    },
+    {
+        "id": 315,
+        "name": "Arpa",
+        "weight": "gr",
+        "protein": "8,2",
+        "suger": "78,8",
+        "fat": "1",
+        "cholesterol": "-",
+        "calories": "349"
+    },
+    {
+        "id": 316,
+        "name": "Buğday(aşurelik)",
+        "weight": "gr",
+        "protein": "11",
+        "suger": "72,9",
+        "fat": "2,5",
+        "cholesterol": "-",
+        "calories": "335"
+    },
+    {
+        "id": 317,
+        "name": "Buğday(durum)",
+        "weight": "gr",
+        "protein": "12,7",
+        "suger": "70,1",
+        "fat": "2,5",
+        "cholesterol": "-",
+        "calories": "332"
+    },
+    {
+        "id": 318,
+        "name": "Bulgur",
+        "weight": "gr",
+        "protein": "10,1",
+        "suger": "78,1",
+        "fat": "1,2",
+        "cholesterol": "-",
+        "calories": "357"
+    },
+    {
+        "id": 319,
+        "name": "CornFlakes",
+        "weight": "gr",
+        "protein": "7,9",
+        "suger": "85,3",
+        "fat": "0,4",
+        "cholesterol": "-",
+        "calories": "386"
+    },
+    {
+        "id": 320,
+        "name": "ÇavdarUnu",
+        "weight": "gr",
+        "protein": "3,1",
+        "suger": "74,8",
+        "fat": "1,7",
+        "cholesterol": "-",
+        "calories": "350"
+    },
+    {
+        "id": 321,
+        "name": "Ekmeklik",
+        "weight": "gr",
+        "protein": "11,8",
+        "suger": "74,7",
+        "fat": "1,1",
+        "cholesterol": "-",
+        "calories": "365"
+    },
+    {
+        "id": 322,
+        "name": "Kepek",
+        "weight": "gr",
+        "protein": "16",
+        "suger": "61,9",
+        "fat": "4,6",
+        "cholesterol": "-",
+        "calories": "213"
+    },
+    {
+        "id": 323,
+        "name": "Mısır(haşlan.)",
+        "weight": "gr",
+        "protein": "3,3",
+        "suger": "21",
+        "fat": "1",
+        "cholesterol": "-",
+        "calories": "91"
+    },
+    {
+        "id": 324,
+        "name": "Mısırunu",
+        "weight": "gr",
+        "protein": "7,8",
+        "suger": "76,9",
+        "fat": "2,6",
+        "cholesterol": "-",
+        "calories": "368"
+    },
+    {
+        "id": 325,
+        "name": "Mısır,tane",
+        "weight": "gr",
+        "protein": "11,9",
+        "suger": "72,1",
+        "fat": "4,7",
+        "cholesterol": "-",
+        "calories": "362"
+    },
+    {
+        "id": 326,
+        "name": "Nişasta",
+        "weight": "gr",
+        "protein": "0,3",
+        "suger": "87,6",
+        "fat": "-",
+        "cholesterol": "-",
+        "calories": "362"
+    },
+    {
+        "id": 327,
+        "name": "Patlamışmısır",
+        "weight": "gr",
+        "protein": "9,8",
+        "suger": "59,1",
+        "fat": "21,8",
+        "cholesterol": "-",
+        "calories": "456"
+    },
+    {
+        "id": 328,
+        "name": "Pirinç",
+        "weight": "gr",
+        "protein": "6,7",
+        "suger": "80,4",
+        "fat": "0,4",
+        "cholesterol": "-",
+        "calories": "363"
+    },
+    {
+        "id": 329,
+        "name": "Şehriye",
+        "weight": "gr",
+        "protein": "12,8",
+        "suger": "72",
+        "fat": "4,6",
+        "cholesterol": "-",
+        "calories": "388"
+    },
+    {
+        "id": 330,
+        "name": "Tarhana",
+        "weight": "gr",
+        "protein": "12,2",
+        "suger": "56,4",
+        "fat": "4,4",
+        "cholesterol": "-",
+        "calories": "316"
+    },
+    {
+        "id": 331,
+        "name": "YulafUnu",
+        "weight": "gr",
+        "protein": "12",
+        "suger": "68",
+        "fat": "75",
+        "cholesterol": "-",
+        "calories": "388"
+    },
+    {
+        "id": 332,
+        "name": "Hanımgöbeği",
+        "weight": "gr",
+        "protein": "2,4",
+        "suger": "33,2",
+        "fat": "7,6",
+        "cholesterol": "-",
+        "calories": "211"
+    },
+    {
+        "id": 333,
+        "name": "Hurmatatlısı",
+        "weight": "gr",
+        "protein": "4,1",
+        "suger": "59,4",
+        "fat": "7,1",
+        "cholesterol": "-",
+        "calories": "318"
+    },
+    {
+        "id": 334,
+        "name": "İrmikhelvası",
+        "weight": "gr",
+        "protein": "3,8",
+        "suger": "43,6",
+        "fat": "12,5",
+        "cholesterol": "-",
+        "calories": "302"
+    },
+    {
+        "id": 335,
+        "name": "Jöle",
+        "weight": "gr",
+        "protein": "6,1",
+        "suger": "62,5",
+        "fat": "0",
+        "cholesterol": "0",
+        "calories": "259"
+    },
+    {
+        "id": 336,
+        "name": "Kastırd",
+        "weight": "gr",
+        "protein": "5,9",
+        "suger": "16,1",
+        "fat": "5,2",
+        "cholesterol": "-",
+        "calories": "126"
+    },
+    {
+        "id": 337,
+        "name": "Kekpasta",
+        "weight": "gr",
+        "protein": "7,5",
+        "suger": "79,4",
+        "fat": "0,8",
+        "cholesterol": "-",
+        "calories": "364"
+    },
+    {
+        "id": 338,
+        "name": "Muhallebi",
+        "weight": "gr",
+        "protein": "5,1",
+        "suger": "29,7",
+        "fat": "3,8",
+        "cholesterol": "-",
+        "calories": "173"
+    },
+    {
+        "id": 339,
+        "name": "Sütlaç",
+        "weight": "gr",
+        "protein": "3,4",
+        "suger": "38",
+        "fat": "2,7",
+        "cholesterol": "-",
+        "calories": "139"
+    },
+    {
+        "id": 340,
+        "name": "Telkadayıf(fıstıklı)",
+        "weight": "gr",
+        "protein": "4,3",
+        "suger": "46,7",
+        "fat": "9,1",
+        "cholesterol": "-",
+        "calories": "286"
+    },
+    {
+        "id": 341,
+        "name": "Wafers",
+        "weight": "gr",
+        "protein": "4,7",
+        "suger": "62,5",
+        "fat": "21,9",
+        "cholesterol": "0",
+        "calories": "535"
+    },
+    {
+        "id": 342,
+        "name": "Bıldırcınyumurta",
+        "weight": "gr",
+        "protein": "13,1",
+        "suger": "0,4",
+        "fat": "11,1",
+        "cholesterol": "844",
+        "calories": "158"
+    },
+    {
+        "id": 343,
+        "name": "Kazyumurta",
+        "weight": "gr",
+        "protein": "13,9",
+        "suger": "1,4",
+        "fat": "13,3",
+        "cholesterol": "-",
+        "calories": "185"
+    },
+    {
+        "id": 344,
+        "name": "Ördekyumurta",
+        "weight": "gr",
+        "protein": "12,8",
+        "suger": "1,5",
+        "fat": "13,8",
+        "cholesterol": "884",
+        "calories": "185"
+    },
+    {
+        "id": 345,
+        "name": "Tavukyumurta(beyaz)",
+        "weight": "gr",
+        "protein": "10,1",
+        "suger": "1,2",
+        "fat": "-",
+        "cholesterol": "0",
+        "calories": "49"
+    },
+    {
+        "id": 346,
+        "name": "Tavukyumurta(sarı)",
+        "weight": "gr",
+        "protein": "16,4",
+        "suger": "0,2",
+        "fat": "32,9",
+        "cholesterol": "1602",
+        "calories": "369"
+    },
+    {
+        "id": 347,
+        "name": "Tavukyumurta(tam)",
+        "weight": "gr",
+        "protein": "12,1",
+        "suger": "1,2",
+        "fat": "11,2",
+        "cholesterol": "548",
+        "calories": "158"
+    }
+]
