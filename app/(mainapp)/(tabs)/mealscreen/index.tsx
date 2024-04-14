@@ -11,25 +11,24 @@ import { router } from 'expo-router'
 
 export default function MealScreen() {
     const dispatch = useDispatch()
-    const { dayCalories } = useSelector((state: any) => state.allData)
+    const { dayCalories, mealData } = useSelector((state: any) => state.allData)
     const { t } = useTranslation()
     return (
         <SafeAreaView style={{ flex: 1 }}>
             <ScrollView showsVerticalScrollIndicator={false} nestedScrollEnabled={true}>
-                <MealPlanner routeFunc={() => router.push('/(mainapp)/(otherscreens)/addMealScreen/')} mealTypeText={t('mealPlannerScreen.meal_one')} mealsCalories={Math.floor(dayCalories * .25)} mealsNumber={4}>
-                    <MealContainer />
+                <MealPlanner routeFunc={() => router.navigate({ pathname: '/(mainapp)/(otherscreens)/addMealScreen/', params: { type: 1, name: "Kahvaltı" } })} mealTypeText={t('mealPlannerScreen.meal_one')} mealsNumber={mealData?.Kahvaltı ? mealData?.Kahvaltı.length : 0}>
+                    <MealContainer name='Kahvaltı' />
                 </MealPlanner>
-                <MealPlanner routeFunc={() => router.push('/(mainapp)/(otherscreens)/addMealScreen/')} mealTypeText={t('mealPlannerScreen.meal_two')} mealsCalories={Math.floor(dayCalories * .15)} mealsNumber={4} >
-                    <MealContainer />
+                <MealPlanner routeFunc={() => router.navigate({ pathname: '/(mainapp)/(otherscreens)/addMealScreen/', params: { type: 2, name: "Ogle" } })} mealTypeText={t('mealPlannerScreen.meal_two')} mealsNumber={mealData?.Ogle ? mealData?.Ogle.length : 0} >
+                    <MealContainer name='Ogle' />
                 </MealPlanner>
-                <MealPlanner routeFunc={() => router.push('/(mainapp)/(otherscreens)/addMealScreen/')} mealTypeText={t('mealPlannerScreen.meal_three')} mealsCalories={Math.floor(dayCalories * .6)} mealsNumber={4} >
-                    <MealContainer />
-
+                <MealPlanner routeFunc={() => router.navigate({ pathname: '/(mainapp)/(otherscreens)/addMealScreen/', params: { type: 3, name: "Aksam" } })} mealTypeText={t('mealPlannerScreen.meal_three')} mealsNumber={mealData?.Aksam ? mealData?.Aksam.length : 0} >
+                    <MealContainer name='Aksam' />
                 </MealPlanner>
-                <MealProgress progress={0} typeText={t('mealPlannerScreen.calories')} value={Math.floor(dayCalories)} valueText='kCal' />
-                <MealProgress progress={0} typeText={t('mealPlannerScreen.protein')} value={Math.floor((dayCalories * .20) / 4)} valueText='g' />
-                <MealProgress progress={0} typeText={t('mealPlannerScreen.fat')} value={Math.floor((dayCalories * .15) / 9)} valueText='g' />
-                <MealProgress progress={0} typeText={t('mealPlannerScreen.carbonhidrat')} value={Math.floor((dayCalories * .65) / 4)} valueText='g' />
+                <MealProgress progress={mealData?.calories ? mealData?.calories[0] : 1} typeText={t('mealPlannerScreen.calories')} value={Math.floor(dayCalories)} valueText='kCal' />
+                <MealProgress progress={mealData?.protein_db ? mealData?.protein_db[0] : 1} typeText={t('mealPlannerScreen.protein')} value={Math.floor((dayCalories * .20) / 4)} valueText='g' />
+                <MealProgress progress={mealData?.yag_db ? mealData?.yag_db[0] : 1} typeText={t('mealPlannerScreen.fat')} value={Math.floor((dayCalories * .15) / 9)} valueText='g' />
+                <MealProgress progress={mealData?.karbonhidrat_db ? mealData?.karbonhidrat_db[0] : 1} typeText={t('mealPlannerScreen.carbonhidrat')} value={Math.floor((dayCalories * .65) / 4)} valueText='g' />
             </ScrollView>
         </SafeAreaView>
     )

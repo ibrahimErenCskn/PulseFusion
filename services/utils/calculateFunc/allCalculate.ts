@@ -65,3 +65,7 @@ export const calculateBmiIndex = ({ height, weight }: calculateBmiIndexProps) =>
         }
     ]
 }
+
+export const calculateFitnessProgram = () => {
+    const deneme = []
+}

@@ -4,6 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import CustomButton from '@/components/CustomButton'
 import COLOR from '@/constants/Colors'
 import WidgetContainer from '@/components/WidgetContainer'
+import { router } from 'expo-router'
 
 const DATA = [
     {
@@ -35,7 +36,7 @@ export default function CoachingScreen() {
                         <View style={{ borderRadius: 1000, borderWidth: 2, borderColor: COLOR.appContainerColor }}>
                             <Image source={require('@/assets/images/EggImg.png')} style={{ width: 120, height: 120 }} resizeMode='contain' />
                         </View>
-                        <CustomButton onP={() => console.log('Tıklandı')} title='Chat' customStyle={{ width: 100, backgroundColor: COLOR.appContainerColor }} />
+                        <CustomButton onP={() => router.push('/(mainapp)/(otherscreens)/chatScreen/')} title='Chat' customStyle={{ width: 100, backgroundColor: COLOR.appContainerColor }} />
                     </View>
                     <WidgetContainer customStyle={{ flex: 1.6, height: '100%' }}>
                         <View style={{ padding: 14 }}>

@@ -5,7 +5,6 @@ import { Formik } from 'formik'
 import SelectedButton from '@/components/SelectedButton'
 import CustomButton from '@/components/CustomButton'
 import Animated, { LightSpeedInRight } from 'react-native-reanimated'
-import CustomModal from '@/components/CustomModal'
 import { useDispatch, useSelector } from 'react-redux'
 import { writeDataInUsers } from '@/services/redux/reducers/firestore'
 import { router } from 'expo-router'
@@ -13,7 +12,6 @@ import { router } from 'expo-router'
 export default function SetMeal() {
     const { isLoading } = useSelector((state: any) => state.userData)
     const [changeAction, setChangeAction] = useState(true)
-    const [visible, setVisible] = useState(false)
     const [typeData, settypeData] = useState([
         {
             title: "Zayıflamak İstiyorum",
@@ -57,53 +55,50 @@ export default function SetMeal() {
 
     const dispatch = useDispatch()
     return (
-        <SafeAreaView style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <CustomModal buttonText='Button' buttonStyle={{ backgroundColor: 'red' }} visible={visible} setVisible={setVisible}>
-                <Formik
-                    initialValues={{ type1: '', type2: '' }}
-                    onSubmit={values => {
-                        setChangeAction(!changeAction)
-                        setVisible(!visible)
-                        dispatch(writeDataInUsers({ data: values, writeType: 'set', dataName: "mealData" }))
-                        if (!isLoading) {
-                            router.replace('/setActivity/')
-                        }
-                    }}
-                >
-                    {({ handleSubmit, setFieldValue, values }) => (
-                        changeAction ? (
-                            <View style={{ width: Dimensions.get('window').width * 0.9, height: Dimensions.get('window').height * .75, backgroundColor: 'white', borderRadius: 20, paddingVertical: 10 }}>
+        <SafeAreaView style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: 'white' }}>
+            <Formik
+                initialValues={{ type1: '', type2: '' }}
+                onSubmit={values => {
+                    setChangeAction(!changeAction)
+                    dispatch(writeDataInUsers({ data: values, writeType: 'set', dataName: "mealData" }))
+                    if (!isLoading) {
+                        router.replace('/setactivity/')
+                    }
+                }}
+            >
+                {({ handleSubmit, setFieldValue, values }) => (
+                    changeAction ? (
+                        <View style={{ width: Dimensions.get('window').width * 0.9, height: Dimensions.get('window').height * .75, backgroundColor: 'white', borderRadius: 20, paddingVertical: 10 }}>
+                            <View style={{ height: '25%', alignItems: 'center', justifyContent: 'center' }}>
+                                <Image source={require('@/assets/images/MealImg.png')} />
+                            </View>
+                            <View style={{ height: '60%', justifyContent: 'center' }}>
+                                <SelectedButton data={typeData} setData={settypeData} setFieldValue={setFieldValue} type={'type1'} />
+                            </View>
+                            <View style={{ alignItems: 'center' }}>
+                                <CustomButton disabled={values.type1 ? false : true} onP={() => setChangeAction(!changeAction)} title='Sonraki' customStyle={{ borderWidth: 2 }} />
+                            </View>
+                        </View>
+                    ) :
+                        (
+                            <Animated.View entering={LightSpeedInRight} style={{ width: Dimensions.get('window').width * 0.9, height: Dimensions.get('window').height * .75, backgroundColor: 'white', borderRadius: 20, paddingVertical: 10 }}>
                                 <View style={{ height: '25%', alignItems: 'center', justifyContent: 'center' }}>
                                     <Image source={require('@/assets/images/MealImg.png')} />
                                 </View>
                                 <View style={{ height: '60%', justifyContent: 'center' }}>
-                                    <SelectedButton data={typeData} setData={settypeData} setFieldValue={setFieldValue} type={'type1'} />
+                                    <SelectedButton data={movingData} setData={setMovingData} setFieldValue={setFieldValue} type={'type2'} />
                                 </View>
                                 <View style={{ alignItems: 'center' }}>
-                                    <CustomButton disabled={values.type1 ? false : true} onP={() => setChangeAction(!changeAction)} title='Sonraki' customStyle={{ borderWidth: 2 }} />
+                                    <CustomButton onP={() => {
+                                        handleSubmit()
+                                    }}
+                                        disabled={values.type2 ? false : true}
+                                        title='Bitir' customStyle={{ borderWidth: 2 }} />
                                 </View>
-                            </View>
-                        ) :
-                            (
-                                <Animated.View entering={LightSpeedInRight} style={{ width: Dimensions.get('window').width * 0.9, height: Dimensions.get('window').height * .75, backgroundColor: 'white', borderRadius: 20, paddingVertical: 10 }}>
-                                    <View style={{ height: '25%', alignItems: 'center', justifyContent: 'center' }}>
-                                        <Image source={require('@/assets/images/MealImg.png')} />
-                                    </View>
-                                    <View style={{ height: '60%', justifyContent: 'center' }}>
-                                        <SelectedButton data={movingData} setData={setMovingData} setFieldValue={setFieldValue} type={'type2'} />
-                                    </View>
-                                    <View style={{ alignItems: 'center' }}>
-                                        <CustomButton onP={() => {
-                                            handleSubmit()
-                                        }}
-                                            disabled={values.type2 ? false : true}
-                                            title='Bitir' customStyle={{ borderWidth: 2 }} />
-                                    </View>
-                                </Animated.View>
-                            )
-                    )}
-                </Formik>
-            </CustomModal>
+                            </Animated.View>
+                        )
+                )}
+            </Formik>
         </SafeAreaView>
     )
 }

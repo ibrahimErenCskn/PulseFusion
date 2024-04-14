@@ -50,21 +50,22 @@ export default function SetProfile() {
                             <View style={{ flex: 1 }}>
                                 <View style={{ height: height * .4, alignItems: 'center', gap: 20 }}>
                                     <Image source={require('@/assets/images/profilSet.png')} />
-                                    <Text style={{ textAlign: 'center', fontWeight: 'bold', fontSize: 22 }}>{t('setProfileScreen.complete-profile-text')}</Text>
+                                    <Text style={{ textAlign: 'center', fontWeight: 'bold', fontSize: 22 }}>Profilini Tamamla</Text>
                                 </View>
                                 <View style={{ flex: 1, width: '100%', alignItems: 'center', gap: 30 }}>
                                     <CustomInputModal
                                         data={GenderData}
                                         setFieldValue={setFieldValue}
                                         setValueName='gender'
-                                        text={t('setProfileScreen.choose-gender')}
+                                        text="Cinsiyet"
                                         icon={<Foundation name="male-female" size={26} color="black" />}
                                     />
                                     <CustomDatePicker setFieldValue={setFieldValue} />
                                     <View style={{ width: '80%', flexDirection: 'row', justifyContent: 'space-between' }}>
                                         <CustomTextInput
+                                            keyboardType='numeric'
                                             icon={<FontAwesome5 name="weight" size={26} color="black" />}
-                                            placeH={t('setProfileScreen.weight')}
+                                            placeH="Kilo"
                                             val={values.weight}
                                             onChangeT={handleChange('weight')}
                                             onB={handleBlur('weight')}
@@ -76,8 +77,9 @@ export default function SetProfile() {
                                     </View>
                                     <View style={{ width: '80%', flexDirection: 'row', justifyContent: 'space-between' }}>
                                         <CustomTextInput
+                                            keyboardType='numeric'
                                             icon={<MaterialIcons name="height" size={26} color="black" />}
-                                            placeH={t('setProfileScreen.height')}
+                                            placeH="Boy"
                                             val={values.height}
                                             onChangeT={handleChange('height')}
                                             onB={handleBlur('height')}
@@ -87,7 +89,7 @@ export default function SetProfile() {
                                             <Text style={{ color: 'white', fontWeight: 'bold' }}>CM</Text>
                                         </LinearGradient>
                                     </View>
-                                    <CustomButton title={t('setProfileScreen.set-profile')} onP={handleSubmit} customStyle={{ backgroundColor: COLOR.authColor }} isLoading={isLoading} />
+                                    <CustomButton title="İleri" onP={handleSubmit} customStyle={{ backgroundColor: COLOR.authColor }} isLoading={isLoading} />
                                 </View>
                             </View>
                         )}

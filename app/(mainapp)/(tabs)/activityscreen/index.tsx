@@ -46,7 +46,7 @@ export default function ActivityScreen() {
                             <Image source={require('@/assets/images/Bottel.png')} />
                             <View>
                                 <Text style={{ fontWeight: '700', fontSize: 14 }}>
-                                    {userData.weight * 0.06} L
+                                    {(userData.weight * 0.06).toFixed(1)} L
                                 </Text>
                                 <Text style={{ fontWeight: '700', fontSize: 14 }}>
                                     Su İçmelisin
@@ -60,7 +60,7 @@ export default function ActivityScreen() {
                             <Image source={require('@/assets/images/FoodImg.png')} />
                             <View>
                                 <Text style={{ fontWeight: '700', fontSize: 14 }}>
-                                    {dayCalories} Kcal
+                                    {dayCalories?.toFixed(0)} Kcal
                                 </Text>
                                 <Text style={{ fontWeight: '700', fontSize: 14 }}>
                                     Almalısın

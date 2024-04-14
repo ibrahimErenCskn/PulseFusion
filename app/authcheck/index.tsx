@@ -14,10 +14,19 @@ export default function AuthCheck() {
             if (user) {
                 dispatch(setData(user))
                 const userCheck = await dispatch(checkUserData({ uid: user.uid, userDataName: "userData" }))
-                if (userCheck.payload) {
-                    router.replace('/(mainapp)/(tabs)/homescreen/')
-                } else {
+                const mealCheck = await dispatch(checkUserData({ uid: user.uid, userDataName: "mealData" }))
+                const activityCheck = await dispatch(checkUserData({ uid: user.uid, userDataName: "activityData" }))
+                if (!userCheck.payload) {
                     router.replace('/setProfile/')
+                }
+                else if (!mealCheck.payload) {
+                    router.replace('/setmeal/')
+                }
+                else if (!activityCheck.payload) {
+                    router.replace('/setactivity/')
+                }
+                else {
+                    router.replace('/(mainapp)/(tabs)/homescreen/')
                 }
             } if (!user) {
                 router.replace('/(auth)/splashscreen/')

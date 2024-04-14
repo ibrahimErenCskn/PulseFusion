@@ -61,6 +61,19 @@ export const getUserData: any = createAsyncThunk('user/getUserData', async ({ us
     }
 })
 
+export const deleteUserData: any = createAsyncThunk('user/deleteUserData', async ({ userDataName, special }: UserProps) => {
+    try {
+        const userUid: any = auth()?.currentUser?.uid
+        const ref = firestore().collection(userUid).doc(userDataName + "/Kahvaltı");
+        await ref.delete()
+        console.log("deleted")
+        return true
+    } catch (err) {
+        console.log(err)
+        throw err
+    }
+})
+
 export interface FirestoreSliceInitialProps {
     isLoading: boolean
 }
@@ -92,6 +105,15 @@ export const firestoreSlice = createSlice({
                 state.isLoading = false
             })
             .addCase(writeDataInUsers.rejected, (state) => {
+                state.isLoading = false
+            })
+            .addCase(deleteUserData.pending, (state) => {
+                state.isLoading = true
+            })
+            .addCase(deleteUserData.fulfilled, (state, action) => {
+                state.isLoading = false
+            })
+            .addCase(deleteUserData.rejected, (state) => {
                 state.isLoading = false
             })
     }

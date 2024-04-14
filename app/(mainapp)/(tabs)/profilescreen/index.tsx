@@ -52,7 +52,7 @@ export default function ProfileScreen() {
                     </View>
                 </WidgetContainer>
                 <Pressable onPress={() => logOut()}>
-                    <Text>Çıkışı Koy</Text>
+                    <Text>Çıkışı Yap</Text>
                     {isLoading && <ActivityIndicator size={'large'} />}
                 </Pressable>
             </ScrollView>

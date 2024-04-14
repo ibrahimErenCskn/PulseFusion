@@ -1,5 +1,5 @@
 import { View, Text, Pressable, ScrollView, ActivityIndicator, Image } from 'react-native'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next'
@@ -13,9 +13,15 @@ import ProgressBar from '@/components/ProgressBar'
 
 export default function HomeScreen() {
     const { data } = useSelector((state: any) => state.auth)
-    const { bmiIndex, dayCalories, activityData, userData } = useSelector((state: any) => state.allData)
+    const { bmiIndex, dayCalories, activityData, userData, mealData } = useSelector((state: any) => state.allData)
     const { t } = useTranslation()
-    const intakeCalories = 2000
+    const [intakeCalories, setIntakeCalories] = React.useState(0)
+    useEffect(() => {
+        if (mealData?.calories) {
+
+            setIntakeCalories(Number(mealData?.calories))
+        }
+    }, [mealData?.calories])
     const pieData = [
         {
             value: intakeCalories >= dayCalories ? dayCalories : intakeCalories,

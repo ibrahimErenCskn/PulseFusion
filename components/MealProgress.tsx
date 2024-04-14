@@ -4,7 +4,7 @@ import WidgetContainer from './WidgetContainer'
 import ProgressBar from './ProgressBar'
 
 interface MealProgressProps {
-    progress: DimensionValue
+    progress: number
     typeText: string
     value: number
     valueText: string
@@ -18,7 +18,7 @@ export default function MealProgress({ progress, typeText, value, valueText }: M
                     <Text style={{ fontWeight: '700' }}>{typeText}</Text>
                     <Text style={{ color: 'white' }}>{value} {valueText}</Text>
                 </View>
-                <ProgressBar progress={progress} />
+                <ProgressBar progress={((progress / value) * 100).toFixed(1)} />
             </View>
         </WidgetContainer>
     )
