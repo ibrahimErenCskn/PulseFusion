@@ -27,10 +27,10 @@ export default function SetActivity() {
         { title: 'Split', active: false }
     ])
     const [dayCountData, setDayCounData] = useState([
-        { title: '3 Gün Spora Gidicem', active: false },
-        { title: '4 Gün Spora Gidicem', active: false },
-        { title: '5 Gün Spora Gidicem', active: false },
-        { title: '6 Gün Spora Gidicem', active: false }
+        { title: '3 Gün Spora Gidicem', active: false, type: 3 },
+        { title: '4 Gün Spora Gidicem', active: false, type: 4 },
+        { title: '5 Gün Spora Gidicem', active: false, type: 5 },
+        { title: '6 Gün Spora Gidicem', active: false, type: 6 }
     ])
     const itemSubmit = (submit: any) => {
         if (count === 3) {
@@ -50,10 +50,10 @@ export default function SetActivity() {
                 { title: 'Split', active: false }
             ])
             setDayCounData([
-                { title: '3 Gün Spora Gidicem', active: false },
-                { title: '4 Gün Spora Gidicem', active: false },
-                { title: '5 Gün Spora Gidicem', active: false },
-                { title: '6 Gün Spora Gidicem', active: false }
+                { title: '3 Gün Spora Gidicem', active: false, type: 3 },
+                { title: '4 Gün Spora Gidicem', active: false, type: 4 },
+                { title: '5 Gün Spora Gidicem', active: false, type: 5 },
+                { title: '6 Gün Spora Gidicem', active: false, type: 6 }
             ])
         } else {
             setCount(count + 1)

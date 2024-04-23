@@ -1,5 +1,5 @@
-import { View, Text, ScrollView, Image, FlatList } from 'react-native'
-import React from 'react'
+import { View, Text, Image, FlatList, Pressable } from 'react-native'
+import React, { useEffect, useState } from 'react'
 import { useLocalSearchParams } from 'expo-router'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import COLOR from '@/constants/Colors';
@@ -32,7 +32,7 @@ export default function FitnessInfoScreen() {
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }}>
             <FlatList
-                data={db.filter((exercise: any) => exercise.equipment === params.name)}
+                data={db.filter((exercise: any) => exercise.target === params.name)}
                 renderItem={renderItem}
                 keyExtractor={(item) => item.id || item.name} // Use ID if available, otherwise fallback to name
                 showsVerticalScrollIndicator={false} // Optional: hide scroll indicator

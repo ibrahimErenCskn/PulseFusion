@@ -66,6 +66,18 @@ export const calculateBmiIndex = ({ height, weight }: calculateBmiIndexProps) =>
     ]
 }
 
-export const calculateFitnessProgram = () => {
-    const deneme = []
+interface calculateFitnessProgramProps {
+    dayCount: number
+    setCount: string
+    type: string
+}
+
+export const calculateFitnessProgram = ({ dayCount = 6, setCount = '4 x 12', type = "Full Body" }: calculateFitnessProgramProps) => {
+    const db = require('../fitnessDb/db.json')
+    const areaType = ["abs", "lats", "pectorals", "hamstrings", "triceps", "quads", "biceps", "upper back", "glutes", "delts", "serratus anterior", "forearms", "calves", "traps", "adductors", "spine", "cardiovascular system", "abductors", "levator scapulae"]
+
+
+
+    let fitnessProgram = []
+    Array.from({ length: dayCount })
 }
