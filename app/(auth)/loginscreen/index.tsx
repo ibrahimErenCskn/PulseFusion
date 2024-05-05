@@ -10,8 +10,7 @@ import { loginHandle, googleLoginAndRegister } from '@/services/redux/reducers/a
 import LottieAnim from '@/services/lottie/LottieAnim';
 import { useTranslation } from 'react-i18next'
 import COLOR from '@/constants/Colors';
-import { Fontisto, MaterialIcons } from '@expo/vector-icons';
-
+import { AntDesign, Fontisto, MaterialIcons } from '@expo/vector-icons';
 const { height } = Dimensions.get('window')
 
 export default function LoginScreen() {
@@ -21,7 +20,7 @@ export default function LoginScreen() {
         <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()} touchSoundDisabled>
             <SafeAreaView style={{ flex: 1, backgroundColor: COLOR.authColor, paddingVertical: 10 }}>
                 <ScrollView>
-                    <View style={{ height: height * 0.25, alignItems: 'center' }}>
+                    <View style={{ height: height * 0.20, alignItems: 'center', justifyContent: 'center' }}>
                         <LottieAnim speed={0.8} anim={require('@/services/lottie/Anim/LoginAnim.json')} width={height * 0.3} height={height * 0.3} />
                     </View>
                     <View style={{ height: height * 0.45 }}>
@@ -56,6 +55,10 @@ export default function LoginScreen() {
                             </Pressable>
                         </View>
                     </View>
+                    <Pressable onPress={() => router.push('/(auth)/coachingscreen/')} style={{ flexDirection: 'row', justifyContent: 'center', gap: 6, alignItems: 'center', paddingHorizontal: 10 }}>
+                        <AntDesign name="idcard" size={36} color="black" />
+                        <Text style={{ fontWeight: 'bold', fontSize: 18 }} >Koç Olmak istermisiniz? <Text style={{ color: 'white' }}>Kayıt Ol</Text></Text>
+                    </Pressable>
                 </ScrollView>
             </SafeAreaView>
         </TouchableWithoutFeedback>

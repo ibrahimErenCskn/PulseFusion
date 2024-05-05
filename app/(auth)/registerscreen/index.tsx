@@ -21,10 +21,10 @@ export default function RegisterScreen() {
         <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()} touchSoundDisabled>
             <SafeAreaView style={{ flex: 1, backgroundColor: COLOR.authColor, paddingVertical: 10 }}>
                 <ScrollView>
-                    <View style={{ height: height * 0.22, alignItems: 'center' }}>
+                    <View style={{ height: height * 0.20, alignItems: 'center' }}>
                         <LottieAnim speed={0.8} anim={require('@/services/lottie/Anim/LoginAnim.json')} width={height * 0.3} height={height * 0.3} />
                     </View>
-                    <View style={{ height: height * 0.45 }}>
+                    <View style={{ height: height * 0.5 }}>
                         <Formik
                             initialValues={{ username: '', email: '', password: '' }}
                             onSubmit={values => {
@@ -45,7 +45,7 @@ export default function RegisterScreen() {
                             )}
                         </Formik>
                     </View>
-                    <View style={{ height: height * 0.15, justifyContent: 'space-between' }}>
+                    <View style={{ height: height * 0.16, justifyContent: 'space-between' }}>
                         <View style={{ flexDirection: 'row', gap: 50, justifyContent: 'center' }}>
                             <SocialEntegration path={require('@/assets/images/googleA.png')} custoImgStyle={{ width: 48, height: 48 }} setPress={() => dispatch(googleLoginAndRegister())} />
                             <SocialEntegration path={require('@/assets/images/facebookA.png')} custoImgStyle={{ width: 48, height: 48 }} />
@@ -56,6 +56,10 @@ export default function RegisterScreen() {
                                 <Text style={{ fontWeight: 'bold', color: 'white', fontSize: 18 }}>{t('loginScreen.login')}</Text>
                             </Pressable>
                         </View>
+                        <Pressable onPress={() => router.push('/(auth)/coachingscreen/')} style={{ flexDirection: 'row', justifyContent: 'center', gap: 6, alignItems: 'center', paddingHorizontal: 10 }}>
+                            <AntDesign name="idcard" size={36} color="black" />
+                            <Text style={{ fontWeight: 'bold', fontSize: 18 }} >Koç Olmak istermisiniz? <Text style={{ color: 'white' }}>Kayıt Ol</Text></Text>
+                        </Pressable>
                     </View>
                 </ScrollView>
             </SafeAreaView>

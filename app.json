@@ -36,7 +36,9 @@
       "@react-native-google-signin/google-signin",
       "@react-native-firebase/app",
       "@react-native-firebase/auth",
-      "@react-native-firebase/crashlytics"
+      "@react-native-firebase/crashlytics",
+      "expo-document-picker",
+      "expo-image-picker"
     ],
     "experiments": {
       "typedRoutes": true

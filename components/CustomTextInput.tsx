@@ -3,7 +3,7 @@ import { TextInput, View, ViewStyle, KeyboardType } from 'react-native'
 
 interface CustomTextInputProps {
     onChangeT: any
-    onB: any
+    onB?: any
     val: string
     placeH: string
     customStyle?: ViewStyle,

@@ -119,9 +119,9 @@ export default function ActivityScreen() {
                         <View style={{ width: '100%' }}>
                             {
                                 calculateFitnessProgram({
-                                    dayCount: activityData?.dayCount.type,
-                                    setCount: activityData?.setCount.title,
-                                    type: activityData?.type.title
+                                    dayCount: activityData?.dayCount?.type,
+                                    setCount: activityData?.setCount?.title,
+                                    type: activityData?.type?.title
                                 })?.map((v: any, i: number) => (
                                     <View key={i} style={{ gap: 3, borderWidth: 1, borderColor: 'white', borderRadius: 10, padding: 10, marginBottom: 10 }}>
                                         <Text style={{ fontSize: 16, fontWeight: '700', color: 'white' }}>
