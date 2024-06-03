@@ -18,7 +18,6 @@ export default function Layout() {
             <Stack.Screen name='splashscreen/index' options={{ headerShown: false }} />
             <Stack.Screen name='loginscreen/index' options={{ headerStyle: { backgroundColor: '#B5C9FF' }, headerTitle: t('loginScreen.login'), headerTitleAlign: 'center', headerShadowVisible: false }} />
             <Stack.Screen name='registerscreen/index' options={{ headerStyle: { backgroundColor: '#B5C9FF' }, headerTitle: t('registerScreen.register'), headerTitleAlign: 'center', headerShadowVisible: false }} />
-            <Stack.Screen name='coachingscreen/index' options={{ headerStyle: { backgroundColor: '#B5C9FF' }, headerTitle: "Koç Kayıt Ekranı", headerTitleAlign: 'center', headerShadowVisible: false }} />
         </Stack>
     )
 }

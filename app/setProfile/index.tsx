@@ -27,7 +27,7 @@ export default function SetProfile() {
             <SafeAreaView style={{ flex: 1, backgroundColor: COLOR.buttonColor }}>
                 <ScrollView>
                     <Formik
-                        initialValues={{ gender: '', birthday: '', weight: '', height: '', }}
+                        initialValues={{ gender: '', birthday: '', weight: '', height: '', activityCoaching: false }}
                         onSubmit={values => {
                             dispatch(writeDataInUsers(
                                 {
@@ -35,7 +35,8 @@ export default function SetProfile() {
                                         gender: values.gender,
                                         birthday: values.birthday,
                                         weight: values.weight,
-                                        height: values.height
+                                        height: values.height,
+                                        activityCoaching: values.activityCoaching
                                     },
                                     dataName: 'userData',
                                     writeType: 'set'

@@ -1,5 +1,5 @@
-import { View, Text, Pressable, ScrollView, ActivityIndicator, Image } from 'react-native'
-import React, { useEffect } from 'react'
+import { View, Text, Pressable, ScrollView, ActivityIndicator } from 'react-native'
+import React, { useEffect, useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next'
@@ -9,13 +9,17 @@ import WidgetContainer from '@/components/WidgetContainer'
 import CustomButton from '@/components/CustomButton'
 import { PieChart } from "react-native-gifted-charts";
 import ProgressBar from '@/components/ProgressBar'
-
-
+import * as Location from 'expo-location';
+import MapView, { Marker } from 'react-native-maps';
+import axios from 'axios'
 export default function HomeScreen() {
     const { data } = useSelector((state: any) => state.auth)
     const { bmiIndex, dayCalories, activityData, userData, mealData } = useSelector((state: any) => state.allData)
     const { t } = useTranslation()
     const [intakeCalories, setIntakeCalories] = React.useState(0)
+    const [location, setLocation] = useState<any>()
+    const [gyms, setGyms] = useState<any>()
+
     useEffect(() => {
         if (mealData?.calories) {
 
@@ -31,7 +35,28 @@ export default function HomeScreen() {
         },
         { value: dayCalories - intakeCalories < 0 ? 0 : dayCalories - intakeCalories, color: '#93FCF8', gradientCenterColor: '#3BE9DE' }
     ];
-
+    useEffect(() => {
+        (async () => {
+            let location = await Location.getCurrentPositionAsync({});
+            setLocation(location);
+        })();
+    }, []);
+    useEffect(() => {
+        if (location?.coords) {
+            (
+                async () => {
+                    try {
+                        const response = await axios.get(
+                            `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${location?.coords.latitude},${location?.coords.longitude}&radius=5000&type=gym&key=AIzaSyBvE6mTNN2h1-GQAQ887p9eg-OyK9Bs0WI`
+                        );
+                        setGyms(response.data.results);
+                    } catch (error) {
+                        console.error(error);
+                    }
+                }
+            )();
+        }
+    }, [location])
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }}>
             <View style={{ paddingTop: 6, paddingHorizontal: 10, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -114,12 +139,6 @@ export default function HomeScreen() {
                             }
                         </View>
                     </WidgetContainer>
-
-                    <WidgetContainer customStyle={{ flex: 1 }} setHeight={200}>
-                        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                            <Text style={{ color: 'white', fontSize: 24 }}>Yakında</Text>
-                        </View>
-                    </WidgetContainer>
                 </View>
                 <WidgetContainer setHeight={100}>
                     <View style={{ alignItems: 'center', gap: 10 }}>
@@ -129,6 +148,65 @@ export default function HomeScreen() {
                         <View style={{ flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', columnGap: 6, rowGap: 4 }}>
                             <ProgressBar progress={activityData?.waterIntake ? parseInt((((activityData?.waterIntake) / ((userData.weight * 0.06) * 1000)) * 100).toFixed(1)) : 0} />
                         </View>
+                    </View>
+                </WidgetContainer>
+                <Text style={{ marginLeft: '5%', fontSize: 24, fontWeight: '700' }}>Yakındaki Spor Salonları</Text>
+                <WidgetContainer setHeight={300} customStyle={{ backgroundColor: 'white', marginBottom: 30 }}>
+                    <View style={{ flex: 1, paddingVertical: 10, paddingHorizontal: 10 }}>
+                        {
+                            location?.coords ? <MapView
+                                style={{ flex: 1 }}
+                                customMapStyle={[
+                                    {
+                                        "featureType": "road.arterial",
+                                        "elementType": "labels",
+                                        "stylers": [
+                                            {
+                                                "visibility": "off"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "featureType": "road.highway",
+                                        "elementType": "labels",
+                                        "stylers": [
+                                            {
+                                                "visibility": "off"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "featureType": "road.local",
+                                        "stylers": [
+                                            {
+                                                "visibility": "off"
+                                            }
+                                        ]
+                                    }
+                                ]}
+                                initialRegion={{
+                                    latitude: location?.coords.latitude,
+                                    longitude: location?.coords.longitude,
+                                    latitudeDelta: 0.0922,
+                                    longitudeDelta: 0.0421,
+                                }}
+                            >
+                                {gyms?.map((item: any) => (
+                                    <Marker
+                                        key={item.place_id}
+                                        coordinate={{
+                                            latitude: item.geometry.location.lat,
+                                            longitude: item.geometry.location.lng,
+                                        }}
+                                        title={item.name}
+                                        description={item.vicinity}
+                                    />
+                                ))}
+                            </MapView> :
+                                <View>
+                                    <Text>Konum bilgileri alınamıyor</Text>
+                                </View>
+                        }
                     </View>
                 </WidgetContainer>
             </ScrollView>

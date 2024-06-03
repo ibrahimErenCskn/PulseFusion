@@ -48,7 +48,6 @@ export default function RegisterScreen() {
                     <View style={{ height: height * 0.16, justifyContent: 'space-between' }}>
                         <View style={{ flexDirection: 'row', gap: 50, justifyContent: 'center' }}>
                             <SocialEntegration path={require('@/assets/images/googleA.png')} custoImgStyle={{ width: 48, height: 48 }} setPress={() => dispatch(googleLoginAndRegister())} />
-                            <SocialEntegration path={require('@/assets/images/facebookA.png')} custoImgStyle={{ width: 48, height: 48 }} />
                         </View>
                         <View style={{ flexDirection: 'row', gap: 5, justifyContent: 'center' }}>
                             <Text style={{ fontWeight: 'bold', fontSize: 18 }}>{t('registerScreen.footer-text')}</Text>
@@ -56,10 +55,6 @@ export default function RegisterScreen() {
                                 <Text style={{ fontWeight: 'bold', color: 'white', fontSize: 18 }}>{t('loginScreen.login')}</Text>
                             </Pressable>
                         </View>
-                        <Pressable onPress={() => router.push('/(auth)/coachingscreen/')} style={{ flexDirection: 'row', justifyContent: 'center', gap: 6, alignItems: 'center', paddingHorizontal: 10 }}>
-                            <AntDesign name="idcard" size={36} color="black" />
-                            <Text style={{ fontWeight: 'bold', fontSize: 18 }} >Koç Olmak istermisiniz? <Text style={{ color: 'white' }}>Kayıt Ol</Text></Text>
-                        </Pressable>
                     </View>
                 </ScrollView>
             </SafeAreaView>

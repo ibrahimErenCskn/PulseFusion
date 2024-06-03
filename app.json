@@ -24,6 +24,11 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyBvE6mTNN2h1-GQAQ887p9eg-OyK9Bs0WI"
+        }
+      },
       "package": "com.ibrahimerencskn.PulseFusion"
     },
     "web": {
@@ -38,7 +43,8 @@
       "@react-native-firebase/auth",
       "@react-native-firebase/crashlytics",
       "expo-document-picker",
-      "expo-image-picker"
+      "expo-image-picker",
+      "expo-location"
     ],
     "experiments": {
       "typedRoutes": true

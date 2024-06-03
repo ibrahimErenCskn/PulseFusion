@@ -1,5 +1,5 @@
 import { View, Text, ScrollView, Image, Pressable, ActivityIndicator } from 'react-native'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { logaut } from '@/services/redux/reducers/authSlice'
 import { SafeAreaView } from 'react-native-safe-area-context'
@@ -9,15 +9,27 @@ import { useTranslation } from 'react-i18next'
 import { router } from 'expo-router'
 import { resetData } from '@/services/redux/reducers/dataSlice'
 import COLOR from '@/constants/Colors'
-
+import firestore from '@react-native-firebase/firestore';
+import auth from '@react-native-firebase/auth';
 
 
 export default function ProfileScreen() {
     const { data, isLoading } = useSelector((state: any) => state.auth)
+    const user = auth().currentUser;
     const { userData, mealData, activityData } = useSelector((state: any) => state.allData)
+    const [userCoachinData, setUserCoachinData] = useState<any>(null)
     const currentYearDate = new Date().getFullYear()
+    const userUid: any = auth()?.currentUser?.uid
     const { t } = useTranslation()
     const dispatch = useDispatch()
+    const getCoachingData = async () => {
+        const querySnapshot: any = await firestore().collection('coachUser').doc(userUid).get();
+        setUserCoachinData(querySnapshot.data()?.CHECKED)
+    }
+
+    useEffect(() => {
+        if (userData?.activityCoaching) { getCoachingData() }
+    }, [])
 
     const logOut = () => {
         dispatch(logaut())
@@ -30,7 +42,7 @@ export default function ProfileScreen() {
                 <WidgetContainer setHeight={200} customStyle={{ padding: 10 }}>
                     <View style={{ gap: 25 }}>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-                            {data?.photoURL && <Image source={{ uri: data?.photoURL }} width={70} height={70} borderRadius={40} />}
+                            <Image source={{ uri: user?.photoURL ? user?.photoURL : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png' }} width={70} height={70} borderRadius={40} />
                             <View style={{ gap: 10 }}>
                                 <Text style={{ fontSize: 18 }}>{data?.displayName}</Text>
                             </View>
@@ -105,6 +117,9 @@ export default function ProfileScreen() {
                         </View>
                     </View>
                 </WidgetContainer>
+                <Pressable onPress={() => router.push('/(mainapp)/(otherscreens)/coachingscreen/')} style={{ width: '95%', alignSelf: 'center', height: 50, backgroundColor: COLOR.appContainerColor, alignItems: 'center', justifyContent: 'center', borderRadius: 10, marginBottom: 10 }}>
+                    <Text style={{ color: 'white', fontSize: 18, fontWeight: '600' }}>Koç Olmak İstiyorum</Text>
+                </Pressable>
                 <Pressable onPress={() => logOut()} style={{ width: '95%', alignSelf: 'center', height: 50, backgroundColor: COLOR.appContainerColor, alignItems: 'center', justifyContent: 'center', borderRadius: 10, marginBottom: 10 }}>
                     <Text style={{ color: 'white', fontSize: 18, fontWeight: '600' }}>Çıkış Yap</Text>
                     {isLoading && <ActivityIndicator size={'large'} />}

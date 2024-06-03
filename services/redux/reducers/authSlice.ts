@@ -16,9 +16,8 @@ export const loginHandle: any = createAsyncThunk('user/login', async ({ email, p
     try {
         await auth().signInWithEmailAndPassword(email, password)
         return auth()?.currentUser
-    } catch (err) {
-        console.log(err)
-        throw err
+    } catch (err: any) {
+        return err.message
     }
 })
 export const googleLoginAndRegister: any = createAsyncThunk('user/googlelogin', async () => {
@@ -28,9 +27,8 @@ export const googleLoginAndRegister: any = createAsyncThunk('user/googlelogin', 
         const googleCredential = auth.GoogleAuthProvider.credential(idToken);
         await auth().signInWithCredential(googleCredential);
         return auth()?.currentUser
-    } catch (err) {
-        console.log(err)
-        throw err
+    } catch (err: any) {
+        return err.message
     }
 })
 
@@ -41,9 +39,8 @@ export const registerHandle: any = createAsyncThunk('user/register', async ({ em
             displayName: username
         })
         return auth()?.currentUser
-    } catch (err) {
-        console.log(err)
-        throw err
+    } catch (err: any) {
+        return err.message
     }
 })
 
@@ -60,11 +57,13 @@ export const logaut: any = createAsyncThunk('user/logaut', async () => {
 export interface AuthSliceInitialProps {
     data: object
     isLoading: boolean
+    error: string
 }
 
 const initialState: AuthSliceInitialProps = {
     data: {},
-    isLoading: false
+    isLoading: false,
+    error: ""
 }
 
 export const authSlice = createSlice({
@@ -83,7 +82,7 @@ export const authSlice = createSlice({
             .addCase(loginHandle.fulfilled, (state, action) => {
                 state.isLoading = false
                 state.data = action.payload
-                console.log("Giriş Yapıldı Email ve Şifre ile")
+                state.error = action.payload
             })
             .addCase(loginHandle.rejected, (state) => {
                 state.isLoading = false
@@ -94,7 +93,7 @@ export const authSlice = createSlice({
             .addCase(googleLoginAndRegister.fulfilled, (state, action) => {
                 state.isLoading = false
                 state.data = action.payload
-                console.log("Giriş Yapıldı Google ile")
+                state.error = action.payload
             })
             .addCase(googleLoginAndRegister.rejected, (state) => {
                 state.isLoading = false
@@ -105,7 +104,7 @@ export const authSlice = createSlice({
             .addCase(registerHandle.fulfilled, (state, action) => {
                 state.isLoading = false
                 state.data = action.payload
-                console.log("Kayıt olundu email ve şifre ile")
+                state.error = action.payload
             })
             .addCase(registerHandle.rejected, (state) => {
                 state.isLoading = false

@@ -7,6 +7,7 @@ export interface dataSliceInitialProps {
     bmiIndex: object
     userData: object
     activityData: object,
+    chatData: object
     dayCalories: number
 }
 
@@ -15,6 +16,7 @@ const initialState: dataSliceInitialProps = {
     mealData: {},
     bmiIndex: {},
     activityData: {},
+    chatData: {},
     dayCalories: 0
 }
 
@@ -48,10 +50,13 @@ export const dataSlice = createSlice({
             state.userData = {}
             state.activityData = {}
             state.dayCalories = 0
+        },
+        setChatDataSlice: (state, action) => {
+            state.chatData = action.payload
         }
     },
 })
 
-export const { addMealData, setBmi, dayCaloriesCalculate, setUserInfo, setActivityData, resetData } = dataSlice.actions
+export const { addMealData, setBmi, dayCaloriesCalculate, setUserInfo, setActivityData, resetData, setChatDataSlice } = dataSlice.actions
 
 export default dataSlice.reducer

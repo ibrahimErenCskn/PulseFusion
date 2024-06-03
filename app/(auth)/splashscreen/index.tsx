@@ -1,17 +1,25 @@
 import { View, Text, Dimensions, TouchableOpacity, Pressable, Image } from 'react-native'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { router } from 'expo-router'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import CustomButton from '@/components/CustomButton'
 import Carousel from '@/components/Carousel'
 import Items from '../../../components/carouselItems/carousel.json'
 import { useTranslation } from 'react-i18next'
-
+import * as Location from 'expo-location';
 const { width, height } = Dimensions.get('window')
 
 export default function SplashScreen() {
     const { t, i18n } = useTranslation()
-
+    useEffect(() => {
+        (async () => {
+            let { status } = await Location.requestForegroundPermissionsAsync();
+            if (status !== 'granted') {
+                console.log('Permission to access location was denied');
+                return;
+            }
+        })();
+    }, []);
     const renderItems = ({ item }: any) => {
         return (
             <TouchableOpacity
@@ -20,7 +28,7 @@ export default function SplashScreen() {
             >
                 <View style={{ width: width, height: '100%', alignItems: 'center', justifyContent: 'center', gap: 30 }}>
                     <Image source={{ uri: item.url }} width={200} height={200} />
-                    <Text style={{ textAlign: 'center', fontWeight: 'bold' }}>{t('splash-text')}</Text>
+                    <Text style={{ textAlign: 'center', fontWeight: 'bold' }}>{item.description}</Text>
                 </View>
             </TouchableOpacity>
         );

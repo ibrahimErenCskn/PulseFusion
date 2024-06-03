@@ -25,13 +25,14 @@ interface WriteDataProps {
     data: object
     writeType: any
     dataName: string
+    collectionName?: string
 }
 
-export const writeDataInUsers: any = createAsyncThunk('user/writedatainusers', async ({ data, writeType, dataName }: WriteDataProps) => {
+export const writeDataInUsers: any = createAsyncThunk('user/writedatainusers', async ({ collectionName, data, writeType, dataName }: WriteDataProps) => {
     if (writeType === "update") {
         try {
             const userUid: any = auth()?.currentUser?.uid
-            firestore().collection(userUid).doc(dataName).update(data);
+            firestore().collection(collectionName ? collectionName : userUid).doc(dataName).update(data);
         } catch (err) {
             console.log(err)
             throw err
@@ -40,7 +41,7 @@ export const writeDataInUsers: any = createAsyncThunk('user/writedatainusers', a
     if (writeType === "set") {
         try {
             const userUid: any = auth()?.currentUser?.uid
-            firestore().collection(userUid).doc(dataName).set(data);
+            firestore().collection(collectionName ? collectionName : userUid).doc(dataName).set(data);
         } catch (err) {
             console.log(err)
             throw err

@@ -4,16 +4,16 @@ import { AntDesign, Feather, FontAwesome, Entypo, Ionicons, MaterialIcons } from
 import { View } from 'react-native';
 import COLOR from '@/constants/Colors';
 import { addListenerData } from '@/services/utils/dataListener';
-import { useDispatch, useSelector } from 'react-redux';
-import { addMealData, dayCaloriesCalculate, setActivityData, setBmi, setUserInfo } from '@/services/redux/reducers/dataSlice';
+import { useDispatch } from 'react-redux';
+import { addMealData, dayCaloriesCalculate, setActivityData, setBmi, setChatDataSlice, setUserInfo } from '@/services/redux/reducers/dataSlice';
 
 export default function _layout() {
     const dispatch = useDispatch()
-    const { userData } = useSelector((state: any) => state.allData)
 
     const [firstMealData, setFirstMealData] = useState<any>()
     const [userData_, setUserData] = useState<any>()
     const [activityData, setActivityData_] = useState<any>()
+    const [chatData, setChatData] = useState<any>()
 
     useEffect(() => {
         addListenerData({ setData: setUserData, dataName: 'userData' })
@@ -31,6 +31,12 @@ export default function _layout() {
         addListenerData({ setData: setActivityData_, dataName: 'activityData' })
         return () => {
             setActivityData_(null)
+        }
+    }, [])
+    useEffect(() => {
+        addListenerData({ setData: setChatData, dataName: 'chat' })
+        return () => {
+            setChatData(null)
         }
     }, [])
     useEffect(() => {
@@ -52,6 +58,11 @@ export default function _layout() {
             dispatch(setActivityData(activityData))
         }
     }, [activityData])
+    useEffect(() => {
+        if (chatData) {
+            dispatch(setChatDataSlice(chatData))
+        }
+    }, [chatData])
 
     return (
         <Tabs initialRouteName='homescreen/index' screenOptions={{ headerShown: false, tabBarStyle: { backgroundColor: COLOR.authColor }, tabBarShowLabel: false, tabBarActiveTintColor: 'black', tabBarInactiveTintColor: 'black', headerShadowVisible: false }}>

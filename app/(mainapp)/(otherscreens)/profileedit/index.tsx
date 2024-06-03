@@ -1,5 +1,5 @@
 import { View, Text, TouchableWithoutFeedback, Keyboard, Pressable, Dimensions, Image } from 'react-native'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import CustomTextInput from '@/components/CustomTextInput'
 import CustomButton from '@/components/CustomButton'
@@ -9,17 +9,18 @@ import { writeDataInUsers } from '@/services/redux/reducers/firestore'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { Formik } from 'formik'
 import SelectedButton from '@/components/SelectedButton'
-import Animated, { LightSpeedInRight } from 'react-native-reanimated'
-
+import auth from '@react-native-firebase/auth';
+import * as ImagePicker from 'expo-image-picker';
 export default function ProfileEdit() {
     const { userData } = useSelector((state: any) => state.allData)
     const { isLoading } = useSelector((state: any) => state.userData)
+    const { data } = useSelector((state: any) => state.auth)
+
     const dispatch = useDispatch()
     const [weight, setWeight] = useState('')
     const [height, setHeight] = useState('')
     const [count, setCount] = useState(0)
     const { type } = useLocalSearchParams()
-    const [changeAction, setChangeAction] = useState(true)
     const [typeData_, settypeData] = useState([
         {
             title: "Zayıflamak İstiyorum",
@@ -81,7 +82,38 @@ export default function ProfileEdit() {
         { title: '5 Gün Spora Gidicem', active: false, type: 5 },
         { title: '6 Gün Spora Gidicem', active: false, type: 6 }
     ])
+    const [selectedFilePhoto, setSelectedFilePhoto] = useState<any>(null);
+    const pickFilePhoto = async () => {
+        try {
+            let result: any = await ImagePicker.launchImageLibraryAsync({
+                mediaTypes: ImagePicker.MediaTypeOptions.Images,
+                allowsEditing: true,
+                quality: 1,
+            });
+            if (result?.assets[0].uri) {
+                setSelectedFilePhoto(result);
+            }
+            else {
+                console.log('dosya seçilmedi');
+                return;
+            }
+        } catch (error) {
+            console.log(error);
+            setSelectedFilePhoto(null);
+        }
+    };
 
+    const updateProfilePicture = async (imageUrl: string) => {
+        const user = auth().currentUser;
+
+        if (user) {
+            await user.updateProfile({
+                photoURL: imageUrl,
+            });
+        } else {
+            throw new Error('No user is signed in');
+        }
+    };
     const itemSubmit = (submit: any) => {
         if (count === 3) {
             submit()
@@ -224,6 +256,12 @@ export default function ProfileEdit() {
         type === 'profile' &&
         <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()} touchSoundDisabled={true}>
             <View style={{ flex: 1, backgroundColor: 'white', alignItems: 'center', justifyContent: 'center', gap: 20 }}>
+                <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+                    <Image source={{ uri: data?.photoURL ? selectedFilePhoto?.assets[0].uri ? selectedFilePhoto?.assets[0].uri : data?.photoURL : selectedFilePhoto?.assets[0].uri ? selectedFilePhoto?.assets[0].uri : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png' }} width={70} height={70} borderRadius={40} />
+                    <Pressable onPress={() => pickFilePhoto()}>
+                        <Text style={{ fontWeight: 'bold', color: 'black', fontSize: 18 }}>Düzenle</Text>
+                    </Pressable>
+                </View>
                 <View style={{ position: 'relative' }}>
                     <Text style={{ position: 'absolute', top: -15, left: 10, width: 50, textAlign: 'center', zIndex: 9999, fontSize: 20, fontWeight: '600', backgroundColor: 'white' }}>Boy</Text>
                     <CustomTextInput customStyle={{ borderRadius: 0, borderWidth: 1, height: 55 }} keyboardType='numeric' placeH={userData?.height} val={height} onChangeT={(text: any) => setHeight(text)} onB={() => { }} />
@@ -232,7 +270,12 @@ export default function ProfileEdit() {
                     <Text style={{ position: 'absolute', top: -15, left: 10, width: 50, textAlign: 'center', zIndex: 9999, fontSize: 20, fontWeight: '600', backgroundColor: 'white' }}>Kilo</Text>
                     <CustomTextInput customStyle={{ borderRadius: 0, borderWidth: 1, height: 55 }} keyboardType='numeric' placeH={userData?.weight} val={weight} onChangeT={(text: any) => setWeight(text)} onB={() => { }} />
                 </View>
-                <CustomButton customStyle={{ backgroundColor: COLOR.appContainerColor }} title='Kaydet' onP={() => dispatch(writeDataInUsers({ data: { weight: weight, height: height }, dataName: 'userData', writeType: 'update' }))} />
+                <CustomButton customStyle={{ backgroundColor: COLOR.appContainerColor }} title='Kaydet' onP={() => {
+                    dispatch(writeDataInUsers({ data: { weight: weight ? weight : userData?.weight, height: height ? height : userData?.height }, dataName: 'userData', writeType: 'update' }))
+                    updateProfilePicture(selectedFilePhoto?.assets[0].uri ? selectedFilePhoto?.assets[0].uri : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png')
+                    router.replace('/(mainapp)/(tabs)/profilescreen/')
+                }}
+                />
             </View >
         </TouchableWithoutFeedback>
     )
